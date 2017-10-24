@@ -1,0 +1,187 @@
+<!--Mobile Issue with header turning blue on shrinking page-->
+
+<!DOCTYPE html>
+<html>
+    <head class="is-mobile">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" id="bulma" href="static/Bulma.css" />
+      <link rel="stylesheet" type="text/css" href="static/twitter-2.css">
+
+
+    </head>
+
+        <body>
+
+        <section class="hero is-primary is-medium header-image">
+            <div class="hero-head">
+
+              <header class="nav">
+                <div class="container">
+                  <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                    <div class="nav-left nav-menu">
+                        <h1 class="nav-item is-active is-6" id="Header">
+                            Political Hangman
+                        </h1>
+                    </div>
+                  <div class="nav-right nav-menu">
+                    <a class="nav-item is-active" href="{{url_for('About') }}">
+                      About
+                    </a>
+                  </div>
+                </div>
+              </header>
+
+            </div>
+            <div class="hero-body">
+              <div class="container has-text-centered">
+                <h2 class="subtitle is-4 is-unselectable">
+                    "Wise men speak because they have something to say, fools because they have to say something"        </h2>
+                <p class="subtitle is-5 is-unselectable">
+                  -Plato
+                </p>
+              </div>
+            </div>
+        </section>
+
+         <section class="container">
+    <div class="columns features">
+    <div class="column is-6">
+        <div class="card">
+          <div class="card-content">
+            <div class="content">
+              <h4>Political Hangman is a twist on the classic game we all grew up with. Instead
+                of the phrase just being random. A politicians latest tweet is the new phrase.</h4>
+              <p>-Good Luck-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-6">
+        <div class="card">
+          <div class="card-content">
+            <div class="content">
+              <h2>Remaining Characters</h2>
+                <p>{{remaining_letters}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+         </section>
+
+         <section>
+             <div class="container has-text centered">
+                 <div class="Title is-1">
+            <h1><strong>-Please choose a politician from the two lists below-</strong></h1>
+             </div>
+             </div>
+        </section>
+
+        <section class="container">
+            <div class="columns features">
+
+            <div class="column" id="Executive">
+
+          <form id="form" role="form" action="" method="POST">
+                <div class="form-group">
+                <label class="label">Legislative</label>
+                <p class="control">
+                    <span class="select">
+                        <select name="polititian">
+                            <option>Select dropdown</option>
+                            <option value="Donald Trump">Donald Trump</option>
+                        </select>
+                        <input type="submit" name="polititian">
+                    </span>
+                </p>
+            </div>
+           </form>
+
+        </div>
+
+        <div class="column" id="Legislative">
+
+            <form id="form" role="form" action="" method="POST">
+                <div class="form-group">
+                <label class="label">Legislative</label>
+                <p class="control">
+                    <span class="select">
+                        <select name="polititian">
+                            <option>Select dropdown</option>
+                            <option value="Bernie Sanders">Bernie Sanders</option>
+                        </select>
+                        <input type="submit" name="polititian">
+                    </span>
+                </p>
+            </div>
+           </form>
+
+
+        </div>
+
+    </div>
+
+
+        </section>
+
+
+
+
+        <section>
+             <div class="container">
+                 <h1 class="has-text-centered">{{guess_head}}</h1>
+                 <p class="has-text-centered">{{guess_phrase}}</p>
+             </div>
+        </section>
+
+
+        <section id ='form-submission'>
+
+            <div class="container">
+        <div class="row has-text-centered" style="margin-top:20px">
+            <div class="col-md-12">
+                <form id="form" role="form" action="" method="POST">
+                    <div class="form-group">
+                        <label form="title">Letter Choice</label>
+                        <input type="text" name="Char_Choice">
+                        <input type="submit">
+                    </div>
+                </form>
+                <h2><strong>{{message_line}}</strong></h2>
+                <h3>You have {{turns}} turns remaining</h3>
+                <h1>{{choice}}</h1>
+                <h1>{{polititian}}</h1>
+            </div>
+        </div>
+        </section>
+
+        </body>
+
+        <section>
+          <footer class="footer">
+            <div class="container">
+              <div class="content has-text-centered">
+                <p>
+                   By <a href="https://www.linkedin.com/in/ryan-erickson-b7ab3948/">Ryan Erickson</a>. Developed using
+                    Python 3, Flask, and Bulma.
+                </p>
+                <p>
+                  <a class="icon" href="https://github.com/RyanErickson74">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </footer>
+        </section>
+
+        </body>
+</html>
