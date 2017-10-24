@@ -1,0 +1,294 @@
+<!--Mobile Issue with header turning blue on shrinking page-->
+
+<!DOCTYPE html>
+<html>
+    <head class="is-mobile">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" id="bulma" href="static/Bulma.css" />
+      <link rel="stylesheet" type="text/css" href="static/twitter-2.css">
+
+
+    </head>
+
+        <body>
+
+        <section class="hero is-primary is-medium header-image">
+            <div class="hero-head">
+
+              <header class="nav">
+                <div class="container">
+                  <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                    <div class="nav-left nav-menu">
+                        <h1 class="nav-item is-active is-6" id="Header">
+                            Political Hangman
+                        </h1>
+                    </div>
+                  <div class="nav-right nav-menu">
+                    <a class="nav-item is-active" href="{{url_for('About') }}">
+                      About
+                    </a>
+                  </div>
+                </div>
+              </header>
+
+            </div>
+            <div class="hero-body">
+              <div class="container has-text-centered">
+                <h2 class="subtitle is-4 is-unselectable">
+                    "Wise men speak because they have something to say, fools because they have to say something"        </h2>
+                <p class="subtitle is-5 is-unselectable">
+                  -Plato
+                </p>
+              </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="block">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title has-text-centered">
+                        CHOOSE A POLITICIAN FROM THE LISTS BELOW
+                    </p>
+                </div>
+        </section>
+
+
+          <section class="container">
+                    <div class="columns features">
+
+                  <div class="column is-3 is-offset-2" style="margin-bottom: 2rem; margin-left: 0rem">
+
+                  <form id="form1" role="form" action="" method="POST">
+                        <div class="form-group">
+                        <label class="label">Executive Branch</label>
+                        <p class="control">
+                            <span class="select">
+                                <select style="width: 220px" name="polititian">
+                                    <option value="Donald Trump">President - Donald Trump<strong</option>
+                                    <option value="Mike Pence">Vice President - Mike Pence</option>
+                                    <optgroup label="-CABINET-"></optgroup>
+                                    <option value="Rex Tillerson">Secretary of State - Rex Tillerson</option>
+                                    <option value="Steven T. Mnuchin">Secretary of the Treasury - Steven T. Munchin
+                                    </option>
+                                   <!--NO twitter <option value="James Mattis">Secretary of Defense - James Mattis</option>-->
+                                    <option value="Jeff Sessions">Attorney General - Jeff Sessions</option>
+                                    <option value="Ryan Zinke">Secretary of the Interior - Ryan Zinke</option>
+                                    <option value="Sonny Perdue">Secretary of Agriculture - Sonny Perdue</option>
+                                    <option value="Wilbur L. Ross, Jr.">
+                                        Secretary of Commerce - Wilbur L. Ross, Jr.</option>
+                                    <option value="Alexander Acosta">Secretary of Labor - Alexander Acosta</option>
+                                    <option value="Benjamin S. Carson, Sr.">
+                                        Secretary of H.U.D - Benjamin S. Carson, Sr.</option>
+                                    <option value="Elaine L. Chao">Secretary of Transportation - Elaine L. Chao</option>
+                                    <option value="James Richard Perry">
+                                        Secretary of Energy - James Richard Perry</option>
+                                    <option value="Elisabeth Prince DeVos">
+                                        Secretary of Education - Elisabeth Prince DeVos</option>
+                                    <option value="David J. Shulkin">
+                                        Secretary of Veterans Affairs - David J. Shulkin</option>
+                                    No twitter <option value="Elaine Duke">
+                                        Acting Secretary of Homeland Security - Elaine Duke</option>
+                                    No twitter<option value="Don J. Wright">
+                                        Acting Secretary of Health and Human Services - Don J. Wright</option>
+                                    <option value="John F. Kelly">White House Chief of Staff - John F. Kelly</option>
+                                    No twitter<option value="Robert Lighthizer">
+                                        U.S. Trade Representative - Robert Lighthizer</option>
+                                    <option value="Daniel Coats">
+                                        Director of National Intelligence - Daniel Coats</option>
+                                    <!--<option value="Nikki R. Haley">-->
+                                        <!--Representative of the U.S. to the U.N - Nikki R. Haley</option>-->
+                                    <!--<option value="Mich Mulvaney">-->
+                                        <!--Director of the Office of Management and Budget - Mich Mulvaney</option>-->
+                                    <!--<option value="Mike Pompeo">Director of the C.I.A. - Mike Pompeo</option>-->
+                                    <!--<option value="Scott Pruitt">Administrator of the E.P.A. - Scott Pruitt</option>-->
+                                    <!--<option value="Linda E. McMahon">Administrator of the Small Business Administration - Linda E. McMahon</option>-->
+                                </select>
+                                <input type="submit" name="polititian" onclick="window.location.href"\">
+                            </span>
+                        </p>
+                    </div>
+                   </form>
+
+                </div>
+
+                  <div class="column is-3 is-offset-2" style="margin-bottom: 2rem">
+                    <form id="form2" role="form" action="" method="POST">
+                        <div class="form-group">
+                        <label class="label">Senate</label>
+                        <p class="control">
+                            <span class="select">
+                                <select style="width: 220px" name="polititian">
+                                    <!--<option value="Richard Shelby">AL: R - Richard Shelby</option>-->
+                                    <!--<option value="Luther Strange">AL: R - Luther Strange</option>-->
+                                    <!--<option value="Lisa Murkowski">AK: R - Lisa Murkowski</option>-->
+                                    <!--<option value="Dan Sullivan">AK: R - San Sullivan</option>-->
+                                    <!--<option value="John McCain">AZ: R - John McCain</option>-->
+                                    <!--<option value="Jeff Flake">AZ: R - Jeff Flake</option>-->
+                                    <!--<option value="John Boozman">AR: R - John Boozman</option>-->
+                                    <!--<option value="Tom Cotton">AR: R - Tom Cotton</option>-->
+                                    <!--<option value="Dienne Feinstein">CA: D - Dienne Feinstein</option>-->
+                                    <!--<option value="Kamala Harris">CA: D - Kamala Harris</option>-->
+                                    <!--<option value="Michael Bennet">CO: D - Michael Bennet</option>-->
+                                    <!--<option value="Cory Gardner">CO: R - Cory Gardner</option>-->
+                                    <!--<option value="Richard Blumenthal">CT: D - Richard Blumentahl</option>-->
+                                    <!--<option value="Chris Murphy">CT: D - Chris Murphey</option>-->
+                                    <!--<option value="Tom Carper">DE: D - Tom Carper</option>-->
+                                    <!--<option value="Chris Coons">DE: D - Chris Coons</option>-->
+                                    <!--<option value="Bill Nelson">FL: D - Bill Nelson</option>-->
+                                    <!--<option value="Marco Rubio">FL: R - Marco Rubio</option>-->
+                                    <!--<option value="Johnny Isakson">GA: R - Johnny Isakson</option>-->
+                                    <!--<option value="David Perdue">GA: R - David Perdue</option>-->
+                                    <!--<option value="Brain Schatz">HI: D - Brain Schatz</option>-->
+                                    <!--<option value="Mazie Hirono">HI: D - Mazie Hirono</option>-->
+                                    <!--<option value="Mike Crapo">ID: R - Mike Crapo</option>-->
+                                    <!--<option value="Jim Risch">ID: R - Jim Risch</option>-->
+                                    <!--<option value="Dick Durbin">IL: D - Dick Durbin</option>-->
+                                    <!--<option value="Tammy Duckworth">IL: D - Tammy Duckworth</option>-->
+                                    <!--<option value="Joe Donnelly">IN: D - Joe Donnely</option>-->
+                                    <!--<option value="Todd Young">IN: R - Todd Young</option>-->
+                                    <!--<option value="Chuck Grassley">IA: R - Chuch Grassley</option>-->
+                                    <!--<option value="Joni Ernst">IA: R - Joni Ernst</option>-->
+                                    <!--<option value="Pat Roberts">KS: R - Pat Roberts</option>-->
+                                    <!--<option value="Jerry Moran">KS: R - Jerry Moran</option>-->
+                                    <!--<option value="Mithc McConnell">KY: R - Mitch McConnell</option>-->
+                                    <!--<option value="Rand Paul">KY: R - Rand Paul</option>-->
+                                    <!--<option value="Bill Cassidy">LA: R - Bill Cassidy</option>-->
+                                    <!--<option value="John N. Kennedy">LA: R - John N. Kennedy</option>-->
+                                    <!--<option value="Susan Collins">ME: R - Susan Collins</option>-->
+                                    <!--<option value="Angus King">ME: I - Angus King</option>-->
+                                    <!--<option value="Ben Cardin">MD: D - Ben Cardin</option>-->
+                                    <!--<option value="Chris Van Hollen">MD: D - Chris Van Hollen</option>-->
+                                    <!--<option value="Elizabeth Warren">MA: D - Elizabeth Warren</option>-->
+                                    <!--<option value="Ed Markey">MA: D - Ed Markey</option>-->
+                                    <!--<option value="Debbie Stabenow">MI: D - Debbie Stabenow</option>-->
+                                    <!--<option value="Gary Peters">MI: D - Gary Peters</option>-->
+                                    <!--<option value="Amy Klobuchar">MN: D - Amy Klubuchar</option>-->
+                                    <!--<option value="Al Franken">MN: D - Al Franken</option>-->
+                                    <!--<option value="Thad Cochran">MS: R - Thad Cochran</option>-->
+                                    <!--<option value="Roger Wicker">MS: R - Roger Wicker</option>-->
+                                    <!--<option value="Claire McCaskill">MO: D - Claire McCaskill</option>-->
+                                    <!--<option value="Roy Blunt">MO: R - Roy Blunt</option>-->
+                                    <!--<option value="Jon Tester">MT: D - Jon Tester</option>-->
+                                    <!--<option value="Steve Daines">MT: R - Steve Daines</option>-->
+                                    <!--<option value="Deb Fischer">NE: R - Deb Fischer</option>-->
+                                    <!--<option value="Ben Sasse">NE: R - Ben Sasse</option>-->
+                                    <!--<option value="Dean Heller">NV: R - Dean Heller</option>-->
+                                    <!--<option value="Catherine Cortez Masto">NV: D - Catherine Cortez Masto</option>-->
+                                    <!--<option value="Jeanne Shaheen">NH: D - Jeanne Shaheen</option>-->
+                                    <!--<option value="Maggie Hassan">NH: D - Maggie Hassan</option>-->
+                                    <!--<option value="Bob Menendez">NJ: D - Bob Menendez</option>-->
+                                    <!--<option value="Cory Booker">NJ: D - Cory Booker</option>-->
+                                    <!--<option value="Tom Udall">NM: D - Tom Udall</option>-->
+                                    <!--<option value="Martin Heinrich">NM: D - Martin Heinrich</option>-->
+                                    <!--<option value="Chuck Schumer">NY: D - Chuck Schumer</option>-->
+                                    <!--<option value="Kirsten Gillibrand">NY: D - Kirsten Gillibrand</option>-->
+                                    <!--<option value="Richard Burr">NC: R - Richard Burr</option>-->
+                                    <!--<option value="Thom Tillis">NC: R - Thom Tillis</option>-->
+                                    <!--<option value="John Hoeven">ND: R - John Hoeven</option>-->
+                                    <!--<option value="Heidi Heitkamp">ND: D - Heidi Heitkamp</option>-->
+                                    <!--<option value="Sherrod Brown">OH: D - Sherrod Brown</option>-->
+                                    <!--<option value="Rob Portman">OH: R - Rob Portman</option>-->
+                                    <!--<option value="Jim Inhofe">OK: R - Jim Inhofe</option>-->
+                                    <!--<option value="James Lankford">OK: R - James Lankford</option>-->
+                                    <!--<option value="Ron Wyden">OR: D - Ron Wyden</option>-->
+                                    <!--<option value="Jeff Merkley">OR: D - Jeff Merkley</option>-->
+                                    <!--<option value="Bob Casey Jr.">PA: D - Bob Casey Jr.</option>-->
+                                    <!--<option value="Pat Toomey">PA: R - Pat Toomey</option>-->
+                                    <!--<option value="Jack Reed">RI: D - Jack Reed</option>-->
+                                    <!--<option value="Sheldon Whitehouse">RI: D - Sheldon Whitehouse</option>-->
+                                    <!--<option value="Lindsey Graham">SC: R - Lindsey Graham</option>-->
+                                    <!--<option value="Tim Scott">SC: R - Tim Schott</option>-->
+                                    <!--<option value="John Thune">SD: R - John Thune</option>-->
+                                    <!--<option value="Mike Rounds">SD: R - Mike Rounds</option>-->
+                                    <!--<option value="Lamar Alexander">TN: R - Lamar Alexander</option>-->
+                                    <!--<option value="Bob Corker">TN: R - Bob Corker</option>-->
+                                    <!--<option value="John Cornyn">TX: R - John Cornyn</option>-->
+                                    <!--<option value="Ted Cruz">TX: R - Ted Cruz</option>-->
+                                    <!--<option value="Orrin Hatch">UT: R - Orrin Hatch</option>-->
+                                    <!--<option value="Mike Lee">UT: R - Mike Lee</option>-->
+                                    <!--<option value="Patrick Leahy">VT: D - Patrick Leahy</option>-->
+                                    <option value="Bernie Sanders">VT: I - Bernie Sanders</option>
+                                    <!--<option value="Mark Warner">VA: D - Mark Warner</option>-->
+                                    <!--<option value="Tim Kaine">VA: D - Tim Kaine</option>-->
+                                    <!--<option value="Patty Murray">WA: D - Patty Murray</option>-->
+                                    <!--<option value="Maria Cantwell">WA: D - Maria Cantwell</option>-->
+                                    <!--<option value="Joe Manchin">WV: D - Joe Manchin</option>-->
+                                    <!--<option value="Shelley Moore Capito">WV: R - Shelley Moore Capito</option>-->
+                                    <!--<option value="Ron Johnson">WI: R - Ron Johnson</option>-->
+                                    <!--<option value="Tammy Baldwin">WI: D - Tammy Baldwin</option>-->
+                                    <!--<option value="Mike Enzi">WY: R - Mike Enzi</option>-->
+                                    <!--<option value="John Barrasso">WY: R - John Barrasso</option>-->
+                                </select>
+                                <input type="submit" name="polititian">
+                            </span>
+                        </p>
+                      </button>
+                    </div>
+                   </form>
+
+
+                </div>
+
+
+                <div class="column is-3 is-offset-1" style="margin-bottom: 2rem">
+                    <form id="forms" role="form" action="" method="POST">
+                        <div class="form-group">
+                        <label class="label">House of Representatives</label>
+                        <p class="control">
+                            <span class="select">
+                                <select style="width: 220px" name="polititian">
+                                    <option class="is-unselectable">Select dropdown</option>
+                                    <option value="Bernie Sanders">Bernie Sanders</option>
+                                    <option value=""></option>
+
+                                </select>
+                                <input type="submit" name="polititian">
+                            </span>
+                        </p>
+                    </div>
+                   </form>
+
+
+                </div>
+
+
+            </div>
+
+
+                </section>
+
+                <h1>{{politician}}</h1>
+                <h1>{{politician_id}}</h1>
+
+
+        </body>
+
+        <section>
+          <footer class="footer">
+            <div class="container">
+              <div class="content has-text-centered">
+                <p>
+                   By <a href="https://www.linkedin.com/in/ryan-erickson-b7ab3948/"><i class="fa fa-linkedin"
+                   aria-hidden="true"></i> Ryan Erickson</a>. Developed using Python 3, Flask, and Bulma.
+                </p>
+                <p>
+                  <a class="icon" href="https://github.com/RyanErickson74">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </footer>
+        </section>
+
+        </body>
+</html>
