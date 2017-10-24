@@ -64,104 +64,15 @@
         </div>
       </div>
 
-      <div class="column is-6">
-        <div class="card">
-          <div class="card-content">
-            <div class="content">
-              <h2>Remaining Characters</h2>
-                <p>{{remaining_letters}}</p>
-            </div>
-          </div>
-        </div>
+      <div class="column is-6 is-success" id="pc">
+        <a href="{{url_for('Politician_choice') }}"
+           class="button is-info is-large is-outlined">Choose Your Politician</a>
+        </a>
       </div>
     </div>
          </section>
 
-         <section>
-             <div class="container has-text centered">
-                 <div class="Title is-1">
-            <h1><strong>-Please choose a politician from the two lists below-</strong></h1>
-             </div>
-             </div>
-        </section>
 
-        <section class="container">
-            <div class="columns features">
-
-            <div class="column" id="Executive">
-
-          <form id="form" role="form" action="" method="POST">
-                <div class="form-group">
-                <label class="label">Legislative</label>
-                <p class="control">
-                    <span class="select">
-                        <select name="polititian">
-                            <option>Select dropdown</option>
-                            <option value="Donald Trump">Donald Trump</option>
-                        </select>
-                        <input type="submit" name="polititian">
-                    </span>
-                </p>
-            </div>
-           </form>
-
-        </div>
-
-        <div class="column" id="Legislative">
-
-            <form id="form" role="form" action="" method="POST">
-                <div class="form-group">
-                <label class="label">Legislative</label>
-                <p class="control">
-                    <span class="select">
-                        <select name="polititian">
-                            <option>Select dropdown</option>
-                            <option value="Bernie Sanders">Bernie Sanders</option>
-                        </select>
-                        <input type="submit" name="polititian">
-                    </span>
-                </p>
-            </div>
-           </form>
-
-
-        </div>
-
-    </div>
-
-
-        </section>
-
-
-
-
-        <section>
-             <div class="container">
-                 <h1 class="has-text-centered">{{guess_head}}</h1>
-                 <p class="has-text-centered">{{guess_phrase}}</p>
-             </div>
-        </section>
-
-
-        <section id ='form-submission'>
-
-            <div class="container">
-        <div class="row has-text-centered" style="margin-top:20px">
-            <div class="col-md-12">
-                <form id="form" role="form" action="" method="POST">
-                    <div class="form-group">
-                        <label form="title">Letter Choice</label>
-                        <input type="text" name="Char_Choice">
-                        <input type="submit">
-                    </div>
-                </form>
-                <h2><strong>{{message_line}}</strong></h2>
-                <h3>You have {{turns}} turns remaining</h3>
-                <h1>{{choice}}</h1>
-                <h1>{{polititian}}</h1>
-            </div>
-        </div>
-        </section>
 
         </body>
 
@@ -170,8 +81,8 @@
             <div class="container">
               <div class="content has-text-centered">
                 <p>
-                   By <a href="https://www.linkedin.com/in/ryan-erickson-b7ab3948/">Ryan Erickson</a>. Developed using
-                    Python 3, Flask, and Bulma.
+                   By <a href="https://www.linkedin.com/in/ryan-erickson-b7ab3948/"><i class="fa fa-linkedin"
+                   aria-hidden="true"></i> Ryan Erickson</a>. Developed using Python 3, Flask, and Bulma.
                 </p>
                 <p>
                   <a class="icon" href="https://github.com/RyanErickson74">
