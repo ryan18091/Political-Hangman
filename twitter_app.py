@@ -1,14 +1,10 @@
 from flask import Flask, request, render_template, url_for, redirect, session
 import os
-import string
 import textwrap
 import random
 import sqlite3
 from datetime import datetime
 
-
-# infile = open('/Users/ryan.erickson/PycharmProjects/Full-Stack/Twitter_App/Trump-Tweets.txt', 'r')
-# lastLine = (list(infile)[-1])
 
 alpl = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
         'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
