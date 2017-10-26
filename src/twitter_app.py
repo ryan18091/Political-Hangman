@@ -17,18 +17,6 @@ turns = ()
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-conn = sqlite3.connect('politicalhangman.db')
-c = conn.cursor()
-
-def create_table():
-    c.execute('CREATE TABLE IF NOT EXISTS game_db(session_id INTEGER, politician VARCHAR, politician_id INTEGER,'
-              'datestamp TEXT, guess_phrase TEXT, phrase TEXT, word_guess TEXT, turns INTEGER, alpl TEXT)')
-    conn.commit()
-    c.close()
-    conn.close()
-
-create_table()
-
 
 def get_phrase():
     conn = sqlite3.connect('politicalhangman.db')
@@ -172,7 +160,7 @@ def Politician_choice():
 
         politician = request.form['polititian']
 
-        from src.pol_ids import t_dict
+        from pol_ids import t_dict
 
         politician_id = t_dict[politician]
 

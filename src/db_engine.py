@@ -38,11 +38,11 @@ conn.close()
 while True:
 
     # for politician in pol_list:
-    from src.pol_ids import t_dict
+    from pol_ids import t_dict
 
     for politician, politician_id in t_dict.items():
 
-        time.sleep(15)
+        time.sleep(1)
         for tweet in tweepy.Cursor(api.user_timeline, id=politician_id).items(10):
 
             # print(tweet)
