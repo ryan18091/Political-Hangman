@@ -1,7 +1,7 @@
 import os
 import sqlite3
 
-from twitter_app import app
+from Twitter_App import app
 
 # from twitter_apptest import app
 
@@ -23,7 +23,7 @@ create_table()
 if __name__ == '__main__':
     app.debug = True
     host = os.environ.get('IP', '0.0.0.0')
-    port = int(os.environ.get('PORT', 8080))
+    port = int(os.environ.get('PORT', 5000))
     # port = int(os.environ.get('PORT', 8910))
 
     app.run(host=host, port=port)
