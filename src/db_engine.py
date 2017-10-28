@@ -5,6 +5,8 @@ from datetime import datetime
 
 import tweepy
 
+from models import *
+
 #Twitter API Keys
 with open('config.json', 'r') as f:
     config = json.loads(f.read())
@@ -23,15 +25,16 @@ api = tweepy.API(auth)
 conn = sqlite3.connect('politicalhangman.db')
 c = conn.cursor()
 
-def create_table():
-    c.execute('CREATE TABLE IF NOT EXISTS PolTweets( politician VARCHAR, politician_id INTEGER, datestamp TEXT, tweet TEXT)')
+def create_table_PolTweets():
+    c.execute('CREATE TABLE IF NOT EXISTS PolTweets(politician VARCHAR, politician_id INTEGER, datestamp TEXT, tweet TEXT)')
 
-def create_table():
+def create_table_Gamedb():
     c.execute('CREATE TABLE IF NOT EXISTS game_db(session_id INTEGER, politician VARCHAR, politician_id INTEGER,'
-              'datestamp TEXT, turns INTEGER, guess_phrase TEXT, remaining_letters TEXT)')
+              'datestamp TEXT, turns INTEGER, guess_phrase TEXT, remaining_letters TEXT, word_guess TEXT, phrase TEXT, alpl TEXT)')
 
 
-create_table()
+create_table_PolTweets()
+create_table_Gamedb()
 c.close()
 conn.close()
 
@@ -73,9 +76,17 @@ while True:
                     c = conn.cursor()
 
                     def delete_pre_tweet():
-                        query = 'delete from PolTweets WHERE politician=?'
-                        c.execute(query, (politician_name,))
-                        conn.commit()
+                        # query = 'delete from PolTweets WHERE politician=?'
+                        # c.execute(query, (politician_name,))
+                        # conn.commit()
+                        # print(politician)
+
+                        tweetdelete = tweets.query.filter_by(politician=politician).first()
+                        db.session.delete(tweetdelete)
+                        db.session.commit()
+
+
+
 
 
                     politician_name = politician
@@ -89,11 +100,15 @@ while True:
                         politician_id = politicianid
                         datestamp = str(datetime.now())
                         tweet = i
-                        c.execute("INSERT  into PolTweets (politician, politician_id, datestamp, tweet) VALUES (?, ?, ?, ?)",
-                                  (politician, politician_id, datestamp, tweet))
-                        conn.commit()
-                        c.close()
-                        conn.close()
+                        # c.execute("INSERT  into PolTweets (politician, politician_id, datestamp, tweet) VALUES (?, ?, ?, ?)",
+                        #           (politician, politician_id, datestamp, tweet))
+                        # conn.commit()
+                        # c.close()
+                        # conn.close()
+
+                        tweetupdate = tweets(politician=politician, politician_id=politician_id, datestamp=datestamp, tweet=tweet)
+                        db.session.add(tweetupdate)
+                        db.session.commit()
 
 
                     tweet_entry()
