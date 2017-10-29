@@ -7,7 +7,7 @@ from flask import Flask, request, render_template, url_for, redirect, session
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-#Futre use of config file
+# Futre use of config file
 # app.config.from_object(os.environ['APP_SETTINGS'])
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///political_hangmanPSQL.db'
@@ -24,9 +24,9 @@ alpl = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 word_guess = []
 turns = ()
 
-
 # app = Flask(__name__)
 app.secret_key = os.urandom(24)
+
 
 # conn = sqlite3.connect('politicalhangman.db')
 # c = conn.cursor()
@@ -42,9 +42,8 @@ app.secret_key = os.urandom(24)
 
 
 def get_phrase():
-
-    if 'user' in session:
-        session_ID = session['user']
+    # if 'user' in session:
+    session_ID = session['user']
     phraseget = Sessions.query.filter_by(session_id=session_ID).first()
     phrase = phraseget.phrase
     print('phrase')
@@ -68,16 +67,14 @@ def get_phrase():
 
     return phrase
 
-def get_word_guess():
 
-    if 'user' in session:
-        session_ID = session['user']
+def get_word_guess():
+    session_ID = session['user']
     word_guessget = Sessions.query.filter_by(session_id=session_ID).first()
     word_guess = word_guessget.word_guess
     word_guess = list(word_guess)
     print('word guess')
     print(word_guess)
-
 
     # conn = sqlite3.connect('politicalhangman.db')
     # c = conn.cursor()
@@ -98,10 +95,9 @@ def get_word_guess():
 
     return word_guess
 
-def get_alpl():
 
-    if 'user' in session:
-        session_ID = session['user']
+def get_alpl():
+    session_ID = session['user']
     alplget = Sessions.query.filter_by(session_id=session_ID).first()
     alpl = alplget.alpl
     alpl = list(alpl)
@@ -128,16 +124,14 @@ def get_alpl():
 
     return alpl
 
-def get_turns():
 
-    if 'user' in session:
-        session_ID = session['user']
+def get_turns():
+    session_ID = session['user']
     turnsget = Sessions.query.filter_by(session_id=session_ID).first()
     turns = turnsget.turns
     turns = int(turns)
     print('turns')
     print(turns)
-
 
     # conn = sqlite3.connect('politicalhangman.db')
     # c = conn.cursor()
@@ -151,10 +145,9 @@ def get_turns():
     # print('turns')
     return turns
 
-def get_politician():
 
-    if 'user' in session:
-        session_ID = session['user']
+def get_politician():
+    session_ID = session['user']
     politicianget = Sessions.query.filter_by(session_id=session_ID).first()
     politician = politicianget.politician
     print('politician')
@@ -173,9 +166,9 @@ def get_politician():
 
     return politician
 
+
 @app.route('/', methods=['POST', 'GET'])
 def Hangman():
-
     if request.method == 'GET':
 
         # session['user'] = 'Anthony'
@@ -211,8 +204,7 @@ def Hangman():
 
         session_id_enter()
 
-
-        #Game resets on returning to the front page
+        # Game resets on returning to the front page
         # global word_guess
         # global phrase_guess
         # global alpl
@@ -229,15 +221,13 @@ def Hangman():
 
     elif request.method == 'POST':
 
-        #currently nothing gets posted to the homepage/ not used
+        # currently nothing gets posted to the homepage/ not used
 
         return render_template('twitter2.html')
 
 
-@app.route('/Politician_choice', methods=['POST','GET'])
+@app.route('/Politician_choice', methods=['POST', 'GET'])
 def Politician_choice():
-
-
     # global politician_id
 
     if request.method == 'GET':
@@ -274,11 +264,11 @@ def Politician_choice():
 
         # def tweet_lookup():
 
-            # global remaining_letters
-            # global turns
-            # global i
-            # global politician
-            # global z
+        # global remaining_letters
+        # global turns
+        # global i
+        # global politician
+        # global z
 
 
         # conn = sqlite3.connect('politicalhangman.db')
@@ -286,10 +276,8 @@ def Politician_choice():
 
         politician_name = politician
 
-
         tweet = tweets.query.filter_by(politician=politician_name).first()
         word = tweet.tweet
-
 
         # print('tweet')
         # print(word)
@@ -367,7 +355,6 @@ def Politician_choice():
         if l <= 2:
             turns = 8
 
-
         # remaining_letters = textwrap.fill(', '.join(alpl), 52)
 
         # conn = sqlite3.connect('politicalhangman.db')
@@ -400,18 +387,13 @@ def Politician_choice():
             db.session.commit()
             print('session_info_enter')
 
-
         session_info_enter(politician, politician_id, word_guess, phrase, alpl, turns)
-
 
         return redirect(url_for('Game'))
 
 
-
 @app.route('/About', methods=['GET'])
-
 def About():
-
     if request.method == 'GET':
 
         # conn = sqlite3.connect('politicalhangman.db')
@@ -442,11 +424,8 @@ def About():
         return render_template('About.html')
 
 
-
-@app.route('/Game', methods=['POST','GET'])
-
+@app.route('/Game', methods=['POST', 'GET'])
 def Game():
-
     if request.method == 'GET':
 
         phrase = get_phrase()
@@ -459,7 +438,7 @@ def Game():
         # print(word_guess)
 
 
-        #phrase, word_guess(bring in as joined_word(delete word_guess below), remaining_letters
+        # phrase, word_guess(bring in as joined_word(delete word_guess below), remaining_letters
 
         # global guess_phrase
         # global turns
@@ -490,8 +469,7 @@ def Game():
 
         guess_phrase = textwrap.fill(joined_word, 20)
 
-        guess_phrase =(' '.join(guess_phrase))
-
+        guess_phrase = (' '.join(guess_phrase))
 
         # print(guess_phrase)
 
@@ -531,8 +509,7 @@ def Game():
 
     elif request.method == 'POST':
 
-
-        #Get guess+phrase, convert to list,
+        # Get guess+phrase, convert to list,
 
         phrase = get_phrase()
         word_guess = get_word_guess()
@@ -540,9 +517,7 @@ def Game():
         turns = get_turns()
         politician = get_politician()
 
-
-
-        #GEt all variables from game_db return variables
+        # GEt all variables from game_db return variables
 
 
         guess_head = 'The latest tweet from %r' % politician
@@ -551,20 +526,18 @@ def Game():
         choice = request.form['Char_Choice']
         choice = choice.lower()
 
-
         if choice not in alpl:
             message_line = "That letter has already been chosen."
 
         if choice not in phrase:
             message_line = 'That choice is not in the phrase'
             turns = (turns - 1)
-            #--- This throw an error not (local variable turns referenced before assignment)
+            # --- This throw an error not (local variable turns referenced before assignment)
 
         if choice == '@' or '#':
             for letter in range(len(phrase)):
                 if choice == phrase[letter]:
                     word_guess[letter] = choice
-
 
         if str.isnumeric(choice):
             for letter in range(len(phrase)):
@@ -594,8 +567,8 @@ def Game():
                 elif ' ' == phrase[letter]:
                     word_guess[letter] = ' '
 
-
-        comp_word = ''.join(word_guess)  # creates an un-joined instance of the word to compare to the guess_word for a win
+        comp_word = ''.join(
+            word_guess)  # creates an un-joined instance of the word to compare to the guess_word for a win
 
         if comp_word == phrase:
 
@@ -630,7 +603,6 @@ def Game():
 
         guess_phrase = (' '.join(guess_phrase))
 
-
         if turns == 0:
 
             # conn = sqlite3.connect('politicalhangman.db')
@@ -652,8 +624,7 @@ def Game():
 
             print('Game Over')
             return render_template('loose.html', phrase=phrase)
-            #Redirect to Game Over page
-
+            # Redirect to Game Over page
 
         # conn = sqlite3.connect('politicalhangman.db')
         # c = conn.cursor()
@@ -680,12 +651,9 @@ def Game():
             session_update.word_guess = word_guess
             db.session.commit()
 
-
-
         session_info_enter(turns, guess_phrase, alpl, phrase, word_guess)
 
         print(guess_phrase)
-
 
         return render_template('Game.html', guess_head=guess_head, remaining_letters=remaining_letters, turns=turns,
                                message_line=message_line, guess_phrase=guess_phrase, choice=choice)
