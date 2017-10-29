@@ -1,14 +1,10 @@
 import os
 import random
-import sqlite3
 import textwrap
 from datetime import datetime
 
 from flask import Flask, request, render_template, url_for, redirect, session
-
 from flask_sqlalchemy import SQLAlchemy
-
-
 
 app = Flask(__name__)
 #Futre use of config file
@@ -193,9 +189,6 @@ def Hangman():
             session['user'] = random.getrandbits(50)
             print(session_ID)
 
-        import sqlite3
-
-
         # conn = sqlite3.connect('politicalhangman.db')
         # c = conn.cursor()
 
@@ -261,7 +254,7 @@ def Politician_choice():
 
         politician = request.form['polititian']
 
-        from src.pol_ids import t_dict
+        from pol_ids import t_dict
 
         politician_id = t_dict[politician]
 
@@ -533,7 +526,7 @@ def Game():
 
 
 
-        return render_template('Game.html',guess_head=guess_head, turns=turns, guess_phrase=guess_phrase,
+        return render_template('Game.html', guess_head=guess_head, turns=turns, guess_phrase=guess_phrase,
                                remaining_letters=remaining_letters)
 
     elif request.method == 'POST':
@@ -694,11 +687,12 @@ def Game():
         print(guess_phrase)
 
 
-        return render_template('Game.html', guess_head=guess_head, remaining_letters=remaining_letters,turns=turns,
+        return render_template('Game.html', guess_head=guess_head, remaining_letters=remaining_letters, turns=turns,
                                message_line=message_line, guess_phrase=guess_phrase, choice=choice)
 
 
 if __name__ == '__main__':
+    # app.run(debug=True, use_relaoder=True)
     app.debug = False
     host = os.environ.get('IP', '0.0.0.0')
     # port = int(os.environ.get('PORT', 8080))

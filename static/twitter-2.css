@@ -78,8 +78,7 @@ font-size: 100px;
 
 .header-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),
-  url('https://tribktla.files.wordpress.com/2017/02/gettyimages-646453344.jpg?quality=85&strip=all&strip=all');
-  background-size: cover;
+  url('http://static.politico.com/7f/3f/4cc5ed61441ca771e777d914d548/170228-donald-trump-blog-gty-1160.jpg');
 }
 
 .nav-item {
@@ -141,7 +140,7 @@ font-size: 100px;
 }
 
 .hero.is-primary {
-    background-color: #1fc8db;
+    /*background-color: #1fc8db;*/
     /* color: white; */
 }
 
