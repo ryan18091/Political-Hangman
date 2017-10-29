@@ -369,8 +369,8 @@ def Politician_choice():
             alpl = "".join(alpl)
 
             word_guess = ''.join(word_guess)
-            if 'user' in session:
-                session_ID = session['user']
+            # if 'user' in session:
+            session_ID = session['user']
             # c.execute("UPDATE game_db set politician=?, politician_id=?, word_guess=?, phrase=?, alpl=?, turns=? WHERE session_id=?",
             #           [politician, politician_id, word_guess, phrase, alpl, turns, session_ID])
             # conn.commit()
@@ -401,8 +401,8 @@ def About():
 
         def delete_db_session():
 
-            if 'user' in session:
-                session_ID = session['user']
+            # if 'user' in session:
+             session_ID = session['user']
 
             deletesession = Sessions.query.filter_by(session_id=session_ID).first()
             db.session.delete(deletesession)
@@ -482,8 +482,8 @@ def Game():
         # c = conn.cursor()
 
         def session_info_enter(turns, guess_phrase):
-            if 'user' in session:
-                session_ID = session['user']
+            # if 'user' in session:
+            session_ID = session['user']
             # c.execute("UPDATE game_db set turns=?, guess_phrase=? WHERE session_id=?",
             #           [turns, guess_phrase, session_ID])
             # conn.commit()
@@ -582,8 +582,8 @@ def Game():
                 # c.close()
                 # conn.close()
 
-                if 'user' in session:
-                    session_ID = session['user']
+                # if 'user' in session:
+                session_ID = session['user']
 
                 deletesession = Sessions.query.filter_by(session_id=session_ID).first()
                 db.session.delete(deletesession)
@@ -609,8 +609,8 @@ def Game():
             # c = conn.cursor()
 
             def delete_db_session():
-                if 'user' in session:
-                    session_ID = session['user']
+                # if 'user' in session:
+                session_ID = session['user']
 
                 deletesession = Sessions.query.filter_by(session_id=session_ID).first()
                 db.session.delete(deletesession)
