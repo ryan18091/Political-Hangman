@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c99b246f-adee-4ef0-b9fd-d48d6a04afa0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/political_hangmanPSQL.db" afterPath="$PROJECT_DIR$/political_hangmanPSQL.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Twitter_App.iml" afterPath="$PROJECT_DIR$/.idea/Twitter_App.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_engine.py" afterPath="$PROJECT_DIR$/db_engine.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,6 +25,7 @@
     <SUITE FILE_PATH="coverage/Twitter_App$test_db_conn.coverage" NAME="test_db_conn Coverage Results" MODIFIED="1509046341910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Twitter_App$run_app.coverage" NAME="run_app Coverage Results" MODIFIED="1509192118345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Twitter_App$Unittests_for_test_FlaskTestCase.coverage" NAME="Unittests for test.FlaskTestCase Coverage Results" MODIFIED="1508953614770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Twitter_App$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1509310424161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -38,7 +43,7 @@
       <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="0">
               <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
               <folding />
             </state>
@@ -48,23 +53,23 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10500">
-              <caret line="700" column="33" lean-forward="false" selection-start-line="700" selection-start-column="33" selection-end-line="700" selection-end-column="33" />
+            <state relative-caret-position="90">
+              <caret line="172" column="31" lean-forward="true" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1509305050000" expanded="true" signature="876:1082" ph="CREATE TABLE... game_db" />
-                <marker date="1509305050000" expanded="true" signature="1544:1589" ph="SELECT phras... game_db" />
-                <marker date="1509305050000" expanded="true" signature="2264:2313" ph="SELECT word_... game_db" />
-                <marker date="1509305050000" expanded="true" signature="3049:3092" ph="SELECT alpl game_db" />
-                <marker date="1509305050000" expanded="true" signature="3771:3815" ph="SELECT turns... game_db" />
-                <marker date="1509305050000" expanded="true" signature="4357:4406" ph="SELECT polit... game_db" />
-                <marker date="1509305050000" expanded="true" signature="5605:5662" ph="INSERT into game_db... " />
-                <marker date="1509305050000" expanded="true" signature="7978:8024" ph="SELECT tweet... PolTweets" />
-                <marker date="1509305050000" expanded="true" signature="10161:10269" ph="UPDATE game_... " />
-                <marker date="1509305050000" expanded="true" signature="11473:11511" ph="DELETE FROM " />
-                <marker date="1509305050000" expanded="true" signature="13314:13375" ph="UPDATE game_... " />
-                <marker date="1509305050000" expanded="true" signature="16319:16357" ph="DELETE FROM " />
-                <marker date="1509305050000" expanded="true" signature="18082:18175" ph="UPDATE game_... " />
+                <marker date="1509310424000" expanded="true" signature="877:1083" ph="CREATE TABLE... game_db" />
+                <marker date="1509310424000" expanded="true" signature="1507:1552" ph="SELECT phras... game_db" />
+                <marker date="1509310424000" expanded="true" signature="2181:2230" ph="SELECT word_... game_db" />
+                <marker date="1509310424000" expanded="true" signature="2933:2976" ph="SELECT alpl game_db" />
+                <marker date="1509310424000" expanded="true" signature="3619:3663" ph="SELECT turns... game_db" />
+                <marker date="1509310424000" expanded="true" signature="4160:4209" ph="SELECT polit... game_db" />
+                <marker date="1509310424000" expanded="true" signature="5312:5369" ph="INSERT into game_db... " />
+                <marker date="1509310424000" expanded="true" signature="7630:7676" ph="SELECT tweet... PolTweets" />
+                <marker date="1509310424000" expanded="true" signature="9812:9920" ph="UPDATE game_... " />
+                <marker date="1509310424000" expanded="true" signature="11121:11159" ph="DELETE FROM " />
+                <marker date="1509310424000" expanded="true" signature="12961:13022" ph="UPDATE game_... " />
+                <marker date="1509310424000" expanded="true" signature="15976:16014" ph="DELETE FROM " />
+                <marker date="1509310424000" expanded="true" signature="17740:17833" ph="UPDATE game_... " />
               </folding>
             </state>
           </provider>
@@ -93,8 +98,8 @@
       <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            <state relative-caret-position="150">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -133,7 +138,7 @@
       <file leaf-file-name="win.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/win.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
+            <state relative-caret-position="825">
               <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
               <folding />
             </state>
@@ -177,9 +182,10 @@
         <option value="$PROJECT_DIR$/src/templates/twitter2.html" />
         <option value="$PROJECT_DIR$/src/static/twitter-2.css" />
         <option value="$PROJECT_DIR$/src/static/gamecss.css" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/Political_Hangman/app.py" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -189,9 +195,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1185" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="45" />
+    <option name="y" value="211" />
+    <option name="width" value="1280" />
     <option name="height" value="717" />
   </component>
   <component name="ProjectView">
@@ -227,15 +234,16 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/images" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Political_Hangman" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/images" />
     </key>
   </component>
@@ -251,7 +259,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.app (1)">
     <configuration name="Twitter_App" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -303,6 +311,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Twitter_App" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -316,7 +342,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Twitter_App" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Political_Hangman/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -334,7 +360,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Twitter_App" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_db.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Political_Hangman/create_db.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -352,7 +378,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Twitter_App" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_engine.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Political_Hangman/db_engine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -375,40 +401,22 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="test_db_conn" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Twitter_App" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/test_db_conn.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.Twitter_App" />
       <item index="1" class="java.lang.String" itemvalue="Python.__init__" />
       <item index="2" class="java.lang.String" itemvalue="Python.run_app" />
       <item index="3" class="java.lang.String" itemvalue="Python.db_engine" />
       <item index="4" class="java.lang.String" itemvalue="Python.db_create" />
-      <item index="5" class="java.lang.String" itemvalue="Python.test_db_conn" />
-      <item index="6" class="java.lang.String" itemvalue="Python.app" />
+      <item index="5" class="java.lang.String" itemvalue="Python.app" />
+      <item index="6" class="java.lang.String" itemvalue="Python.app (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.app" />
-        <item index="1" class="java.lang.String" itemvalue="Python.run_app" />
-        <item index="2" class="java.lang.String" itemvalue="Python.db_engine" />
-        <item index="3" class="java.lang.String" itemvalue="Python.db_create" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test_db_conn" />
+        <item index="0" class="java.lang.String" itemvalue="Python.app (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.app" />
+        <item index="2" class="java.lang.String" itemvalue="Python.run_app" />
+        <item index="3" class="java.lang.String" itemvalue="Python.db_engine" />
+        <item index="4" class="java.lang.String" itemvalue="Python.db_create" />
       </list>
     </recent_temporary>
   </component>
@@ -556,7 +564,28 @@
       <option name="project" value="LOCAL" />
       <updated>1509305208459</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Session_ID change">
+      <created>1509308676965</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1509308676965</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Session_ID change">
+      <created>1509309208989</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1509309208989</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Session_ID change">
+      <created>1509309444484</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1509309444484</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -589,26 +618,26 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1185" height="717" extended-state="0" />
+    <frame x="45" y="211" width="1280" height="717" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30707395" sideWeight="0.31421646" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30707395" sideWeight="0.6857835" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30707395" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51881015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2907916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -632,7 +661,8 @@
     <MESSAGE value="new" />
     <MESSAGE value="renamed" />
     <MESSAGE value="re-arange" />
-    <option name="LAST_COMMIT_MESSAGE" value="re-arange" />
+    <MESSAGE value="Session_ID change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Session_ID change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -676,14 +706,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Twitter_App.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Twitter_App.py" />
     <entry file="file://$PROJECT_DIR$/images/header_image.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -735,10 +758,10 @@
           <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="false" />
-            <marker date="1509192339000" expanded="true" signature="645:752" ph="CREATE TABLE... PolTweets" />
-            <marker date="1509192339000" expanded="true" signature="798:1026" ph="CREATE TABLE... game_db" />
-            <marker date="1509192339000" expanded="true" signature="2289:2329" ph="delete from " />
-            <marker date="1509192339000" expanded="true" signature="3087:3175" ph="INSERT into PolTweets" />
+            <marker date="1509308612000" expanded="true" signature="645:752" ph="CREATE TABLE... PolTweets" />
+            <marker date="1509308612000" expanded="true" signature="798:1026" ph="CREATE TABLE... game_db" />
+            <marker date="1509308612000" expanded="true" signature="2289:2329" ph="delete from " />
+            <marker date="1509308612000" expanded="true" signature="3087:3175" ph="INSERT into PolTweets" />
           </folding>
         </state>
       </provider>
@@ -749,19 +772,19 @@
           <caret line="665" column="70" lean-forward="false" selection-start-line="665" selection-start-column="70" selection-end-line="665" selection-end-column="70" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1509305050000" expanded="true" signature="876:1082" ph="CREATE TABLE... game_db" />
-            <marker date="1509305050000" expanded="true" signature="1544:1589" ph="SELECT phras... game_db" />
-            <marker date="1509305050000" expanded="true" signature="2264:2313" ph="SELECT word_... game_db" />
-            <marker date="1509305050000" expanded="true" signature="3049:3092" ph="SELECT alpl game_db" />
-            <marker date="1509305050000" expanded="true" signature="3771:3815" ph="SELECT turns... game_db" />
-            <marker date="1509305050000" expanded="true" signature="4357:4406" ph="SELECT polit... game_db" />
-            <marker date="1509305050000" expanded="true" signature="5605:5662" ph="INSERT into game_db... " />
-            <marker date="1509305050000" expanded="true" signature="7978:8024" ph="SELECT tweet... PolTweets" />
-            <marker date="1509305050000" expanded="true" signature="10161:10269" ph="UPDATE game_... " />
-            <marker date="1509305050000" expanded="true" signature="11473:11511" ph="DELETE FROM " />
-            <marker date="1509305050000" expanded="true" signature="13314:13375" ph="UPDATE game_... " />
-            <marker date="1509305050000" expanded="true" signature="16319:16357" ph="DELETE FROM " />
-            <marker date="1509305050000" expanded="true" signature="18082:18175" ph="UPDATE game_... " />
+            <marker date="1509310424000" expanded="true" signature="877:1083" ph="CREATE TABLE... game_db" />
+            <marker date="1509310424000" expanded="true" signature="1507:1552" ph="SELECT phras... game_db" />
+            <marker date="1509310424000" expanded="true" signature="2181:2230" ph="SELECT word_... game_db" />
+            <marker date="1509310424000" expanded="true" signature="2933:2976" ph="SELECT alpl game_db" />
+            <marker date="1509310424000" expanded="true" signature="3619:3663" ph="SELECT turns... game_db" />
+            <marker date="1509310424000" expanded="true" signature="4160:4209" ph="SELECT polit... game_db" />
+            <marker date="1509310424000" expanded="true" signature="5312:5369" ph="INSERT into game_db... " />
+            <marker date="1509310424000" expanded="true" signature="7630:7676" ph="SELECT tweet... PolTweets" />
+            <marker date="1509310424000" expanded="true" signature="9812:9920" ph="UPDATE game_... " />
+            <marker date="1509310424000" expanded="true" signature="11121:11159" ph="DELETE FROM " />
+            <marker date="1509310424000" expanded="true" signature="12961:13022" ph="UPDATE game_... " />
+            <marker date="1509310424000" expanded="true" signature="15976:16014" ph="DELETE FROM " />
+            <marker date="1509310424000" expanded="true" signature="17740:17833" ph="UPDATE game_... " />
           </folding>
         </state>
       </provider>
@@ -775,32 +798,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Political_Hangman.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Political_Hangman.sh" />
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2445">
           <caret line="163" column="0" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1509305050000" expanded="true" signature="876:1082" ph="CREATE TABLE... game_db" />
-            <marker date="1509305050000" expanded="true" signature="1544:1589" ph="SELECT phras... game_db" />
-            <marker date="1509305050000" expanded="true" signature="2264:2313" ph="SELECT word_... game_db" />
-            <marker date="1509305050000" expanded="true" signature="3049:3092" ph="SELECT alpl game_db" />
-            <marker date="1509305050000" expanded="true" signature="3771:3815" ph="SELECT turns... game_db" />
-            <marker date="1509305050000" expanded="true" signature="4357:4406" ph="SELECT polit... game_db" />
-            <marker date="1509305050000" expanded="true" signature="5605:5662" ph="INSERT into game_db... " />
-            <marker date="1509305050000" expanded="true" signature="7978:8024" ph="SELECT tweet... PolTweets" />
-            <marker date="1509305050000" expanded="true" signature="10161:10269" ph="UPDATE game_... " />
-            <marker date="1509305050000" expanded="true" signature="11473:11511" ph="DELETE FROM " />
-            <marker date="1509305050000" expanded="true" signature="13314:13375" ph="UPDATE game_... " />
-            <marker date="1509305050000" expanded="true" signature="16319:16357" ph="DELETE FROM " />
-            <marker date="1509305050000" expanded="true" signature="18082:18175" ph="UPDATE game_... " />
+            <marker date="1509310424000" expanded="true" signature="877:1083" ph="CREATE TABLE... game_db" />
+            <marker date="1509310424000" expanded="true" signature="1507:1552" ph="SELECT phras... game_db" />
+            <marker date="1509310424000" expanded="true" signature="2181:2230" ph="SELECT word_... game_db" />
+            <marker date="1509310424000" expanded="true" signature="2933:2976" ph="SELECT alpl game_db" />
+            <marker date="1509310424000" expanded="true" signature="3619:3663" ph="SELECT turns... game_db" />
+            <marker date="1509310424000" expanded="true" signature="4160:4209" ph="SELECT polit... game_db" />
+            <marker date="1509310424000" expanded="true" signature="5312:5369" ph="INSERT into game_db... " />
+            <marker date="1509310424000" expanded="true" signature="7630:7676" ph="SELECT tweet... PolTweets" />
+            <marker date="1509310424000" expanded="true" signature="9812:9920" ph="UPDATE game_... " />
+            <marker date="1509310424000" expanded="true" signature="11121:11159" ph="DELETE FROM " />
+            <marker date="1509310424000" expanded="true" signature="12961:13022" ph="UPDATE game_... " />
+            <marker date="1509310424000" expanded="true" signature="15976:16014" ph="DELETE FROM " />
+            <marker date="1509310424000" expanded="true" signature="17740:17833" ph="UPDATE game_... " />
           </folding>
         </state>
       </provider>
@@ -811,10 +828,10 @@
           <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="84" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="false" />
-            <marker date="1509192339000" expanded="true" signature="645:752" ph="CREATE TABLE... PolTweets" />
-            <marker date="1509192339000" expanded="true" signature="798:1026" ph="CREATE TABLE... game_db" />
-            <marker date="1509192339000" expanded="true" signature="2289:2329" ph="delete from " />
-            <marker date="1509192339000" expanded="true" signature="3087:3175" ph="INSERT into PolTweets" />
+            <marker date="1509308612000" expanded="true" signature="645:752" ph="CREATE TABLE... PolTweets" />
+            <marker date="1509308612000" expanded="true" signature="798:1026" ph="CREATE TABLE... game_db" />
+            <marker date="1509308612000" expanded="true" signature="2289:2329" ph="delete from " />
+            <marker date="1509308612000" expanded="true" signature="3087:3175" ph="INSERT into PolTweets" />
           </folding>
         </state>
       </provider>
@@ -843,14 +860,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uwsgi.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/uwsgi.ini" />
     <entry file="file://$PROJECT_DIR$/runtime.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -866,13 +876,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Political_Hangman.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Political_Hangman.sh" />
     <entry file="file://$PROJECT_DIR$/src/run_app.py" />
     <entry file="file://$PROJECT_DIR$/src/test_db_conn.py" />
     <entry file="file://$PROJECT_DIR$/src/test.py" />
@@ -882,19 +886,11 @@
           <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="false" />
-            <marker date="1509192339000" expanded="true" signature="645:752" ph="CREATE TABLE... PolTweets" />
-            <marker date="1509192339000" expanded="true" signature="798:1026" ph="CREATE TABLE... game_db" />
-            <marker date="1509192339000" expanded="true" signature="2289:2329" ph="delete from " />
-            <marker date="1509192339000" expanded="true" signature="3087:3175" ph="INSERT into PolTweets" />
+            <marker date="1509308612000" expanded="true" signature="645:752" ph="CREATE TABLE... PolTweets" />
+            <marker date="1509308612000" expanded="true" signature="798:1026" ph="CREATE TABLE... game_db" />
+            <marker date="1509308612000" expanded="true" signature="2289:2329" ph="delete from " />
+            <marker date="1509308612000" expanded="true" signature="3087:3175" ph="INSERT into PolTweets" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/share/virtualenvs/Twitter-App/lib/python3.6/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23790">
-          <caret line="1611" column="0" lean-forward="false" selection-start-line="1611" selection-start-column="0" selection-end-line="1611" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -906,13 +902,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py" />
     <entry file="file://$USER_HOME$/.local/share/virtualenvs/Twitter-App/lib/python3.6/site-packages/sqlalchemy/engine/default.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -956,7 +946,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/win.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
+        <state relative-caret-position="825">
           <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
           <folding />
         </state>
@@ -970,14 +960,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uwsgi.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/uwsgi.ini" />
     <entry file="file://$PROJECT_DIR$/runtime.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -988,7 +971,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="0">
           <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding />
         </state>
@@ -1002,22 +985,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Twitter_App.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Twitter_App.py" />
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1026,33 +994,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/create_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/share/virtualenvs/Twitter-App/lib/python3.6/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="1981" column="0" lean-forward="false" selection-start-line="1981" selection-start-column="0" selection-end-line="1981" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10500">
-          <caret line="700" column="33" lean-forward="false" selection-start-line="700" selection-start-column="33" selection-end-line="700" selection-end-column="33" />
+        <state relative-caret-position="90">
+          <caret line="172" column="31" lean-forward="true" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1509305050000" expanded="true" signature="876:1082" ph="CREATE TABLE... game_db" />
-            <marker date="1509305050000" expanded="true" signature="1544:1589" ph="SELECT phras... game_db" />
-            <marker date="1509305050000" expanded="true" signature="2264:2313" ph="SELECT word_... game_db" />
-            <marker date="1509305050000" expanded="true" signature="3049:3092" ph="SELECT alpl game_db" />
-            <marker date="1509305050000" expanded="true" signature="3771:3815" ph="SELECT turns... game_db" />
-            <marker date="1509305050000" expanded="true" signature="4357:4406" ph="SELECT polit... game_db" />
-            <marker date="1509305050000" expanded="true" signature="5605:5662" ph="INSERT into game_db... " />
-            <marker date="1509305050000" expanded="true" signature="7978:8024" ph="SELECT tweet... PolTweets" />
-            <marker date="1509305050000" expanded="true" signature="10161:10269" ph="UPDATE game_... " />
-            <marker date="1509305050000" expanded="true" signature="11473:11511" ph="DELETE FROM " />
-            <marker date="1509305050000" expanded="true" signature="13314:13375" ph="UPDATE game_... " />
-            <marker date="1509305050000" expanded="true" signature="16319:16357" ph="DELETE FROM " />
-            <marker date="1509305050000" expanded="true" signature="18082:18175" ph="UPDATE game_... " />
+            <marker date="1509310424000" expanded="true" signature="877:1083" ph="CREATE TABLE... game_db" />
+            <marker date="1509310424000" expanded="true" signature="1507:1552" ph="SELECT phras... game_db" />
+            <marker date="1509310424000" expanded="true" signature="2181:2230" ph="SELECT word_... game_db" />
+            <marker date="1509310424000" expanded="true" signature="2933:2976" ph="SELECT alpl game_db" />
+            <marker date="1509310424000" expanded="true" signature="3619:3663" ph="SELECT turns... game_db" />
+            <marker date="1509310424000" expanded="true" signature="4160:4209" ph="SELECT polit... game_db" />
+            <marker date="1509310424000" expanded="true" signature="5312:5369" ph="INSERT into game_db... " />
+            <marker date="1509310424000" expanded="true" signature="7630:7676" ph="SELECT tweet... PolTweets" />
+            <marker date="1509310424000" expanded="true" signature="9812:9920" ph="UPDATE game_... " />
+            <marker date="1509310424000" expanded="true" signature="11121:11159" ph="DELETE FROM " />
+            <marker date="1509310424000" expanded="true" signature="12961:13022" ph="UPDATE game_... " />
+            <marker date="1509310424000" expanded="true" signature="15976:16014" ph="DELETE FROM " />
+            <marker date="1509310424000" expanded="true" signature="17740:17833" ph="UPDATE game_... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state relative-caret-position="150">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding />
         </state>
       </provider>

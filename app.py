@@ -46,8 +46,7 @@ def get_phrase():
         session_ID = session['user']
     phraseget = Sessions.query.filter_by(session_id=session_ID).first()
     phrase = phraseget.phrase
-    print('phrase')
-    print(phrase)
+
 
     # conn = sqlite3.connect('politicalhangman.db')
     # c = conn.cursor()
@@ -74,8 +73,7 @@ def get_word_guess():
     word_guessget = Sessions.query.filter_by(session_id=session_ID).first()
     word_guess = word_guessget.word_guess
     word_guess = list(word_guess)
-    print('word guess')
-    print(word_guess)
+
 
     # conn = sqlite3.connect('politicalhangman.db')
     # c = conn.cursor()
@@ -103,8 +101,7 @@ def get_alpl():
     alplget = Sessions.query.filter_by(session_id=session_ID).first()
     alpl = alplget.alpl
     alpl = list(alpl)
-    print('alpl')
-    print(alpl)
+
 
     # conn = sqlite3.connect('politicalhangman.db')
     # c = conn.cursor()
@@ -133,8 +130,7 @@ def get_turns():
     turnsget = Sessions.query.filter_by(session_id=session_ID).first()
     turns = turnsget.turns
     turns = int(turns)
-    print('turns')
-    print(turns)
+
 
     # conn = sqlite3.connect('politicalhangman.db')
     # c = conn.cursor()
@@ -154,8 +150,7 @@ def get_politician():
         session_ID = session['user']
     politicianget = Sessions.query.filter_by(session_id=session_ID).first()
     politician = politicianget.politician
-    print('politician')
-    print(politician)
+
 
     # conn = sqlite3.connect('politicalhangman.db')
     # c = conn.cursor()
@@ -171,6 +166,8 @@ def get_politician():
     return politician
 
 
+
+
 @app.route('/', methods=['POST', 'GET'])
 def Hangman():
     if request.method == 'GET':
@@ -180,11 +177,9 @@ def Hangman():
 
         if 'user' in session:
             session_ID = session['user']
-            print(session_ID)
 
         if 'user' not in session:
             session['user'] = random.getrandbits(50)
-            print(session_ID)
 
         # conn = sqlite3.connect('politicalhangman.db')
         # c = conn.cursor()
@@ -198,7 +193,6 @@ def Hangman():
             db.session.add(id_enter)
             db.session.commit()
 
-            print('session_id_enter')
 
             # session_id = session_ID
             # datestamp = str(datetime.now())
@@ -236,8 +230,7 @@ def Politician_choice():
 
     if request.method == 'GET':
 
-        if 'user' in session:
-            print(session['user'])
+        # if 'user' in session:
 
         return render_template('Politician_choice.html')
 
@@ -389,7 +382,7 @@ def Politician_choice():
             sessioninfo.alpl = alpl
             sessioninfo.turns = turns
             db.session.commit()
-            print('session_info_enter')
+            # print('session_info_enter')
 
         session_info_enter(politician, politician_id, word_guess, phrase, alpl, turns)
 
@@ -626,7 +619,7 @@ def Game():
 
             dropsession()
 
-            print('Game Over')
+            # print('Game Over')
             return render_template('loose.html', phrase=phrase)
             # Redirect to Game Over page
 
@@ -657,7 +650,7 @@ def Game():
 
         session_info_enter(turns, guess_phrase, alpl, phrase, word_guess)
 
-        print(guess_phrase)
+        # print(guess_phrase)
 
         return render_template('Game.html', guess_head=guess_head, remaining_letters=remaining_letters, turns=turns,
                                message_line=message_line, guess_phrase=guess_phrase, choice=choice)
