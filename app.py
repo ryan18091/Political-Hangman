@@ -42,9 +42,10 @@ app.secret_key = os.urandom(24)
 
 
 def get_phrase():
-    if 'user' in session:
-        session_ID = session['user']
-    phraseget = Sessions.query.filter_by(session_id=session_ID).first()
+    # if 'user' in session:
+    session_id = session['user']
+    # session_id = session_ID
+    phraseget = Sessions.query.filter_by(session_id=session_id).first()
     phrase = phraseget.phrase
 
 
@@ -68,9 +69,10 @@ def get_phrase():
 
 
 def get_word_guess():
-    if 'user' in session:
-        session_ID = session['user']
-    word_guessget = Sessions.query.filter_by(session_id=session_ID).first()
+    # if 'user' in session:
+    session_id = session['user']
+    # session_id = session_ID
+    word_guessget = Sessions.query.filter_by(session_id=session_id).first()
     word_guess = word_guessget.word_guess
     word_guess = list(word_guess)
 
@@ -96,9 +98,11 @@ def get_word_guess():
 
 
 def get_alpl():
-    if 'user' in session:
-        session_ID = session['user']
-    alplget = Sessions.query.filter_by(session_id=session_ID).first()
+    # if 'user' in session:
+    session_id = session['user']
+
+    # session_id = session_ID
+    alplget = Sessions.query.filter_by(session_id=session_id).first()
     alpl = alplget.alpl
     alpl = list(alpl)
 
@@ -125,9 +129,10 @@ def get_alpl():
 
 
 def get_turns():
-    if 'user' in session:
-        session_ID = session['user']
-    turnsget = Sessions.query.filter_by(session_id=session_ID).first()
+    # if 'user' in session:
+    session_id = session['user']
+    # session_id = session_ID
+    turnsget = Sessions.query.filter_by(session_id=session_id).first()
     turns = turnsget.turns
     turns = int(turns)
 
@@ -146,9 +151,10 @@ def get_turns():
 
 
 def get_politician():
-    if 'user' in session:
-        session_ID = session['user']
-    politicianget = Sessions.query.filter_by(session_id=session_ID).first()
+    # if 'user' in session:
+    session_id = session['user']
+    # session_id = session_ID
+    politicianget = Sessions.query.filter_by(session_id=session_id).first()
     politician = politicianget.politician
 
 
@@ -366,15 +372,15 @@ def Politician_choice():
             alpl = "".join(alpl)
 
             word_guess = ''.join(word_guess)
-            if 'user' in session:
-                session_ID = session['user']
+            # if 'user' in session:
+            session_ID = session['user']
             # c.execute("UPDATE game_db set politician=?, politician_id=?, word_guess=?, phrase=?, alpl=?, turns=? WHERE session_id=?",
             #           [politician, politician_id, word_guess, phrase, alpl, turns, session_ID])
             # conn.commit()
             # c.close()
             # conn.close()
-
-            sessioninfo = Sessions.query.filter_by(session_id=session_ID).first()
+            session_id = session_ID
+            sessioninfo = Sessions.query.filter_by(session_id=session_id).first()
             sessioninfo.politician = politician
             sessioninfo.politician_id = politician_id
             sessioninfo.word_guess = word_guess
@@ -398,10 +404,10 @@ def About():
 
         def delete_db_session():
 
-            if 'user' in session:
-                session_ID = session['user']
-
-            deletesession = Sessions.query.filter_by(session_id=session_ID).first()
+            # if 'user' in session:
+            #     session_ID = session['user']
+            session_id = session_ID
+            deletesession = Sessions.query.filter_by(session_id=session_id).first()
             db.session.delete(deletesession)
             db.session.commit()
 
@@ -479,15 +485,15 @@ def Game():
         # c = conn.cursor()
 
         def session_info_enter(turns, guess_phrase):
-            if 'user' in session:
-                session_ID = session['user']
+            # if 'user' in session:
+            session_ID = session['user']
             # c.execute("UPDATE game_db set turns=?, guess_phrase=? WHERE session_id=?",
             #           [turns, guess_phrase, session_ID])
             # conn.commit()
             # c.close()
             # conn.close()
-
-            sessioninfo = Sessions.query.filter_by(session_id=session_ID).first()
+            session_id = session_ID
+            sessioninfo = Sessions.query.filter_by(session_id=session_id).first()
             sessioninfo.turns = turns
             sessioninfo.guess_phrase = guess_phrase
             db.session.commit()
@@ -579,10 +585,10 @@ def Game():
                 # c.close()
                 # conn.close()
 
-                if 'user' in session:
-                    session_ID = session['user']
-
-                deletesession = Sessions.query.filter_by(session_id=session_ID).first()
+                # if 'user' in session:
+                #     session_ID = session['user']
+                session_id = session_ID
+                deletesession = Sessions.query.filter_by(session_id=session_id).first()
                 db.session.delete(deletesession)
 
             delete_db_session()
@@ -606,10 +612,10 @@ def Game():
             # c = conn.cursor()
 
             def delete_db_session():
-                if 'user' in session:
-                    session_ID = session['user']
-
-                deletesession = Sessions.query.filter_by(session_id=session_ID).first()
+                # if 'user' in session:
+                #     session_ID = session['user']
+                session_id = session_ID
+                deletesession = Sessions.query.filter_by(session_id=session_id).first()
                 db.session.delete(deletesession)
 
             delete_db_session()
@@ -637,10 +643,10 @@ def Game():
             # c.close()
             # conn.close()
 
-            if 'user' in session:
-                session_ID = session['user']
-
-            session_update = Sessions.query.filter_by(session_id=session_ID).first()
+            # if 'user' in session:
+            session_ID = session['user']
+            session_id = session_ID
+            session_update = Sessions.query.filter_by(session_id=session_id).first()
             session_update.turns = turns
             session_update.guess_phrase = guess_phrase
             session_update.alpl = alpl
