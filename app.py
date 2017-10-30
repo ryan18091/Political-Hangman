@@ -7,7 +7,8 @@ from flask import Flask, request, render_template, url_for, redirect, session
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-# Futre use of config file
+# import os
+#
 # app.config.from_object(os.environ['APP_SETTINGS'])
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///political_hangmanPSQL.db'
@@ -25,88 +26,32 @@ word_guess = []
 turns = ()
 
 # app = Flask(__name__)
-app.secret_key = os.urandom(24)
+app.secret_key = '\xfd{H\xe5<\x95\xf9\xe3\x96.5\xd1\x01O<!\xd5\xa2\xa0\x9fR"\xa1\xa8'
 
 
-# conn = sqlite3.connect('politicalhangman.db')
-# c = conn.cursor()
 
-# def create_table():
-#     c.execute('CREATE TABLE IF NOT EXISTS game_db(session_id INTEGER, politician VARCHAR, politician_id INTEGER,'
-#               'datestamp TEXT, guess_phrase TEXT, phrase TEXT, word_guess TEXT, turns INTEGER, alpl TEXT)')
-#     conn.commit()
-#     c.close()
-#     conn.close()
-#
-# create_table()
 
 
 def get_phrase(session_id):
-    # if 'user' in session:
-    #     session_ID = session['user']
-    #     return session_ID
-    # # session_ID = session_ID
-    # session_id = session_ID
+
     phraseget = Sessions.query.filter_by(session_id=session_id).first()
     phrase = phraseget.phrase
-
-
-    # conn = sqlite3.connect('politicalhangman.db')
-    # c = conn.cursor()
-    # if 'user' in session:
-    #     session_ID = session['user']
-    # c.execute("SELECT phrase FROM game_db WHERE session_id=?", [session_ID])
-    # phrase = c.fetchone()
-    # #converts tuple to str
-    # phrase = ''.join(phrase)
-    # conn.commit()
-    # c.close()
-    # conn.close()
-    #
-    # print('phrase')
-    # print(phrase)
 
 
     return phrase
 
 
 def get_word_guess(session_id):
-    # if 'user' in session:
-    #     session_ID = session['user']
-    #     return session_ID
-    # # session_ID = session_ID
-    # session_id = session_ID
+
     word_guessget = Sessions.query.filter_by(session_id=session_id).first()
     word_guess = word_guessget.word_guess
     word_guess = list(word_guess)
-
-
-    # conn = sqlite3.connect('politicalhangman.db')
-    # c = conn.cursor()
-    # if 'user' in session:
-    #     session_ID = session['user']
-    # c.execute("SELECT word_guess FROM game_db WHERE session_id=?", [session_ID])
-    # word_guess = c.fetchone()
-    # #converts tuple to str with characters broken apart
-    # word_guess = ''.join(word_guess)
-    # #converts str to list
-    # word_guess = list(word_guess)
-    # conn.commit()
-    # c.close()
-    # conn.close()
-    #
-    # print(word_guess)
-    # print('word guess')
 
     return word_guess
 
 
 def get_alpl(session_id):
-    # if 'user' in session:
-    #     session_ID = session['user']
-    #     return session_ID
-    # # session_ID = session_ID
-    # session_id = session_ID
+
     alplget = Sessions.query.filter_by(session_id=session_id).first()
     alpl = alplget.alpl
     alpl = list(alpl)
