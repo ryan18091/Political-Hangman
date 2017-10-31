@@ -8,7 +8,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <link rel="stylesheet" id="bulma" href="static/Bulma.css" />
-      <link rel="stylesheet" type="text/css" href="static/gamecss.css">
+{#      <link rel="stylesheet" type="text/css" href="static/gamecss.css">#}
+      <link rel="stylesheet" type="text/css" href="static/twitter-2.css">
+
 
 
     </head>
@@ -19,7 +21,7 @@
         <!--<source src="" type="video/mp4">-->
     <!--</video>-->
 
-        <section class="hero is-primary is-medium header-image">
+        <section class="hero is-primary is-medium header-image background={{ image }}">
             <div class="hero-head">
 
               <header class="nav">
@@ -53,7 +55,7 @@
                         <div class="box" id="guessblock" style="background: rgba(255,255,255,0.3);">
                         <figure class=" is-4by3">
                             <h1 style="color: white">{{guess_head}}</h1>
-                            <pre id="pretag" style="color: white">{{guess_phrase}}</pre>
+                            <pre id="pretag" style="color: white; font-family: ">{{guess_phrase}}</pre>
                         </figure>
                         </div>
                       </div>
@@ -148,7 +150,7 @@
         </body>
 
         <section>
-          <footer class="footer">
+          <footer class="footer" style="color: gray">
             <div class="container">
               <div class="content has-text-centered">
                 <p>
