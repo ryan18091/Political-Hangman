@@ -35,12 +35,16 @@ class tweets(db.Model):
     politician_id = db.Column(db.Integer,unique=True, nullable=True)
     datestamp = db.Column(db.String,unique=False, nullable=True)
     tweet = db.Column(db.String,unique=False, nullable=True)
+    background_url = db.Column(db.String,unique=False, nullable=True)
+    profile_url = db.Column(db.String,unique=False, nullable=True)
 
-    def __init__(self, politician, politician_id, datestamp, tweet):
+    def __init__(self, politician, politician_id, datestamp, tweet, background_url, profile_url):
         self.politician = politician
         self.politician_id = politician_id
         self.datestamp = datestamp
         self.tweet = tweet
+        self.background_url = background_url
+        self.profile_url = profile_url
 
     def __repr__(self):
         return '<User %r>' % self.username
