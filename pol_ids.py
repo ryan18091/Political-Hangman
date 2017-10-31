@@ -5,7 +5,9 @@ t_dict = {'Donald Trump': 25073877, 'Bernie Sanders': 216776631,'Mike Pence': 22
           'James Richard Perry': 830128820447539208, 'Elisabeth Prince DeVos': 828997388920619008,
           'David J. Shulkin':831482588246196225, 'John F. Kelly':891048045361733636, 'Daniel Coats':212262370,
           'Luther Strange':829794295355940866, 'Lisa Murkowski':18061669,'John McCain':  19394188, 'Jeff Flake':16056306,
-          'John Boozman':5558312, 'Bradley Byrne':2253968388 }
+          'John Boozman':5558312, 'Bradley Byrne':2253968388, 'Martha Roby':224294785, 'Mike Rogers':33977070,
+          'Robery Aderholt':76452765, 'Mo Brooks':237299871, 'Gary Palmer': 2861616083, 'Terri A. Sewell':381152398,
+          'Don Young': 37007274,}
 
 
 
