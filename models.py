@@ -33,7 +33,7 @@ class tweets(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     politician = db.Column(db.String,unique=True, nullable=True)
     politician_id = db.Column(db.Integer,unique=True, nullable=True)
-    datestamp = db.Column(db.String,unique=False, nullable=True)
+    datestamp = db.Column(db.Integer,unique=False, nullable=True)
     tweet = db.Column(db.String,unique=False, nullable=True)
     background_url = db.Column(db.String,unique=False, nullable=True)
     profile_url = db.Column(db.String,unique=False, nullable=True)
