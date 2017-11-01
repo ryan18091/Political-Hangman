@@ -8,8 +8,8 @@ import tweepy
 from models import *
 
 #Twitter API Keys
-with open('config_secret.json', 'r') as f:
-    config = json.loads(f.read())
+# with open('config_secret.json', 'r') as f:
+#     config = json.loads(f.read())
 consumer_key = config['consumer_key']
 consumer_secret = config['consumer_secret']
 access_token = config['access_token']
