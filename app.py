@@ -16,6 +16,8 @@ import os
 app.config.from_object(os.environ['APP_SETTINGS'])
 print(os.environ['APP_SETTINGS'])
 
+# DEBUG = False
+# SECRET_KEY = '\xc0\xc3\xe42\xb6\x0cl\x93\xfd\x8e\xfd(\xb7\x8de\x9an\x86\x19\xea\x87\xb5\x1f\xea'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///political_hangmanPSQL.db'
 # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -129,13 +131,13 @@ def get_politician(session_id):
     # print('politician')
 
     return politician
-
-def get_backgroun_url(politician_name):
-    backgroundget = tweets.query.filter_by(politician=politician_name).first()
-    image = backgroundget.background_url
-    print(image)
-    print('test1')
-    return image
+#
+# def get_backgroun_url(politician_name):
+#     backgroundget = tweets.query.filter_by(politician=politician_name).first()
+#     image = backgroundget.background_url
+#     print(image)
+#     print('test1')
+#     return image
 
 
 
@@ -167,6 +169,10 @@ def Hangman():
             # # session_ID = session_ID
             session_id = session_ID
             datestamp = str(datetime.now())
+            print('session id')
+            print(type(session_id))
+            print('datestamp')
+            print(type(datestamp))
             id_enter = Sessions(session_id=session_id, datestamp=datestamp, politician=None, politician_id=None,
                                 guess_phrase=None, phrase=None, word_guess=None, turns=None, alpl=None)
             db.session.add(id_enter)
@@ -261,7 +267,7 @@ def Politician_choice():
         tweet = tweets.query.filter_by(politician=politician_name).first()
         word = tweet.tweet
 
-        image = get_backgroun_url(politician_name)
+        # image = get_backgroun_url(politician_name)
 
 
         # print('tweet')
@@ -375,16 +381,27 @@ def Politician_choice():
             sessioninfo.alpl = alpl
             sessioninfo.turns = turns
             db.session.commit()
+            print('politician')
+            print(type(politician))
+            print('politician id')
+            print(type(politician_id))
+            print('word_guess')
+            print(type(word_guess))
+            print('phrase')
+            print(type(phrase))
+            print('alpl')
+            print(type(alpl))
+            print('turns')
+            print(type(turns))
+            print('session id')
+            print(type(session_id))
             # print('session_info_enter')
 
         session_info_enter(politician, politician_id, word_guess, phrase, alpl, turns, session_ID)
 
-        print('test')
-        print(image)
-        print('test')
 
-        return redirect(url_for('Game', image=image))
         # return redirect(url_for('Game', image=image))
+        # # return redirect(url_for('Game', image=image))
 
 
 @app.route('/About', methods=['GET'])
