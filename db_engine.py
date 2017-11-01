@@ -170,11 +170,11 @@ while True:
                         i = i[:p]
 
                     if '&amp' in i:
-                        print(i)
-                        print(type(i))
+                        # print(i)
+                        # print(type(i))
                         i = i.replace("&amp", "&")
-                        print('&')
-                        print(i)
+                        # print('&')
+                        # print(i)
 
 
                     def tweet_entry():
@@ -201,6 +201,8 @@ while True:
                     # print('tweet entry')
                     # print(i)
                     tweet_entry()
+                    print(politician_name)
+                    print(tweet)
                     # print(politician)
                     # print(i)
                     # print(50 * '#')
