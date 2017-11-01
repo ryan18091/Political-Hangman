@@ -351,7 +351,7 @@ def Politician_choice():
         # conn = sqlite3.connect('politicalhangman.db')
         # c = conn.cursor()
 
-        def session_info_enter(politician, politician_id, word_guess, phrase, alpl, turns, session_ID):
+        def session_info_enter(politician, word_guess, phrase, alpl, turns, session_ID):
 
             # remaining_letters =''.join(remaining_letters)
             # if 'user' in session:
@@ -375,7 +375,7 @@ def Politician_choice():
             session_id = session_ID
             sessioninfo = Sessions.query.filter_by(session_id=session_id).first()
             sessioninfo.politician = politician
-            sessioninfo.politician_id = politician_id
+            # sessioninfo.politician_id = politician_id
             sessioninfo.word_guess = word_guess
             sessioninfo.phrase = phrase
             sessioninfo.alpl = alpl
@@ -383,8 +383,8 @@ def Politician_choice():
             db.session.commit()
             print('politician')
             print(type(politician))
-            print('politician id')
-            print(type(politician_id))
+            # print('politician id')
+            # print(type(politician_id))
             print('word_guess')
             print(type(word_guess))
             print('phrase')
@@ -397,7 +397,7 @@ def Politician_choice():
             print(type(session_id))
             # print('session_info_enter')
 
-        session_info_enter(politician, politician_id, word_guess, phrase, alpl, turns, session_ID)
+        session_info_enter(politician, word_guess, phrase, alpl, turns, session_ID)
 
 
         # return redirect(url_for('Game', image=image))
@@ -610,15 +610,7 @@ def Game():
             # c = conn.cursor()
 
             def delete_db_session():
-                # query = 'DELETE FROM game_db WHERE session_id=?'
-                # c.execute(query, ((session['user']),))
-                # conn.commit()
-                # c.close()
-                # conn.close()
 
-                # if 'user' in session:
-                #     session_ID = session['user']
-                # session_id = session_ID
                 if 'user' in session:
                     session_ID = session['user']
                     return session_ID
@@ -673,7 +665,7 @@ def Game():
         # conn = sqlite3.connect('politicalhangman.db')
         # c = conn.cursor()
 
-        def session_info_enter(turns, guess_phrase, alpl, phrase, word_guess, session_id):
+        def session_info_enter(turns, guess_phrase, alpl, word_guess, session_id):
             alpl = "".join(alpl)
             word_guess = ''.join(word_guess)
             # if 'user' in session:
@@ -700,7 +692,7 @@ def Game():
             session_update.word_guess = word_guess
             db.session.commit()
 
-        session_info_enter(turns, guess_phrase, alpl, phrase, word_guess, session_id)
+        session_info_enter(turns, guess_phrase, alpl, word_guess, session_id)
 
         # print(guess_phrase)
 
