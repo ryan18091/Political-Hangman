@@ -60,6 +60,7 @@ while True:
     for politician, politician_id in t_dict.items():
 
         time.sleep(6)
+        print("Twitter API Engine Running...")
         for tweet in tweepy.Cursor(api.user_timeline, id=politician_id, tweet_mode='extended').items(10):
 
 
@@ -137,12 +138,12 @@ while True:
                         tweet = i
                         # background_url = background
                         # profile_url = profile
-                        print(politician)
-                        # print(politician_id)
-                        # print(datestamp)
-                        # print(tweet)
-                        # print(background_url)
-                        # print(profile_url)
+                        # print(politician)
+                        # # print(politician_id)
+                        # # print(datestamp)
+                        # # print(tweet)
+                        # # print(background_url)
+                        # # print(profile_url)
                         # tweetupdate = tweets(politician=politician, politician_id=politician_id, datestamp=datestamp, tweet=tweet, background_url=background_url, profile_url=profile_url)
                         tweetupdate = tweets(politician=politician, datestamp=datestamp, tweet=tweet)
 
