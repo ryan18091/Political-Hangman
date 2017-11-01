@@ -6,7 +6,7 @@ class Sessions(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     session_id = db.Column(db.Integer,unique=False, nullable=True)
     politician = db.Column(db.String,unique=False, nullable=True)
-    politician_id = db.Column(db.Integer,unique=False, nullable=True)
+    # politician_id = db.Column(db.Integer,unique=False, nullable=True)
     datestamp = db.Column(db.String,unique=False, nullable=True)
     guess_phrase = db.Column(db.String,unique=False, nullable=True)
     phrase = db.Column(db.String,unique=False, nullable=True)
@@ -15,10 +15,10 @@ class Sessions(db.Model):
     alpl = db.Column(db.String,unique=False, nullable=True)
 
 
-    def __init__(self, session_id, politician, politician_id, datestamp, guess_phrase, phrase, word_guess, turns, alpl):
+    def __init__(self, session_id, politician, datestamp, guess_phrase, phrase, word_guess, turns, alpl):
         self.session_id = session_id
         self.politician = politician
-        self.politician_id = politician_id
+        # self.politician_id = politician_id
         self.datestamp = datestamp
         self.guess_phrase = guess_phrase
         self.phrase = phrase
@@ -32,15 +32,15 @@ class Sessions(db.Model):
 class tweets(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     politician = db.Column(db.String,unique=True, nullable=True)
-    politician_id = db.Column(db.Integer,unique=True, nullable=True)
+    # politician_id = db.Column(db.Integer,unique=True, nullable=True)
     datestamp = db.Column(db.String,unique=False, nullable=True)
     tweet = db.Column(db.String,unique=False, nullable=True)
     # background_url = db.Column(db.String,unique=False, nullable=True)
     # profile_url = db.Column(db.String,unique=False, nullable=True)
 
-    def __init__(self, politician, politician_id, datestamp, tweet):
+    def __init__(self, politician,  datestamp, tweet):
         self.politician = politician
-        self.politician_id = politician_id
+        # self.politician_id = politician_id
         self.datestamp = datestamp
         self.tweet = tweet
         # self.background_url = background_url
