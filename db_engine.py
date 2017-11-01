@@ -7,13 +7,14 @@ import tweepy
 
 from models import *
 
-#Twitter API Keys
+# Twitter API Keys
 # with open('config_secret.json', 'r') as f:
 #     config = json.loads(f.read())
-consumer_key = config['consumer_key']
-consumer_secret = config['consumer_secret']
-access_token = config['access_token']
-access_token_secret = config['access_token_secret']
+# consumer_key = config['consumer_key']
+# consumer_secret = config['consumer_secret']
+# access_token = config['access_token']
+# access_token_secret = config['access_token_secret']
+
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
