@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 import os
 app.config.from_object(os.environ['APP_SETTINGS'])
-print(os.environ['APP_SETTINGS'])
+# print(os.environ['APP_SETTINGS'])
 
 # DEBUG = False
 # SECRET_KEY = '\xc0\xc3\xe42\xb6\x0cl\x93\xfd\x8e\xfd(\xb7\x8de\x9an\x86\x19\xea\x87\xb5\x1f\xea'
@@ -151,7 +151,7 @@ def Hangman():
 
         # if 'user' in session:
         session_ID = session['user']
-        print(session_ID)
+        # print(session_ID)
             # return session_ID
 
 
@@ -169,10 +169,10 @@ def Hangman():
             # # session_ID = session_ID
             session_id = session_ID
             datestamp = str(datetime.now())
-            print('session id')
-            print(type(session_id))
-            print('datestamp')
-            print(type(datestamp))
+            # print('session id')
+            # print(type(session_id))
+            # print('datestamp')
+            # print(type(datestamp))
             id_enter = Sessions(session_id=session_id, datestamp=None, politician=None, guess_phrase=None,
                                 phrase=None, word_guess=None, turns=None, alpl=None)
             db.session.add(id_enter)
@@ -186,7 +186,7 @@ def Hangman():
             # conn.commit()
 
 
-        print(session_ID)
+        # print(session_ID)
         session_id_enter(session_ID)
 
         # Game resets on returning to the front page
@@ -381,20 +381,20 @@ def Politician_choice():
             sessioninfo.alpl = alpl
             sessioninfo.turns = turns
             db.session.commit()
-            print('politician')
-            print(type(politician))
-            # print('politician id')
-            # print(type(politician_id))
-            print('word_guess')
-            print(type(word_guess))
-            print('phrase')
-            print(type(phrase))
-            print('alpl')
-            print(type(alpl))
-            print('turns')
-            print(type(turns))
-            print('session id')
-            print(type(session_id))
+            # print('politician')
+            # print(type(politician))
+            # # print('politician id')
+            # # print(type(politician_id))
+            # print('word_guess')
+            # print(type(word_guess))
+            # print('phrase')
+            # print(type(phrase))
+            # print('alpl')
+            # print(type(alpl))
+            # print('turns')
+            # print(type(turns))
+            # print('session id')
+            # print(type(session_id))
             # print('session_info_enter')
 
         session_info_enter(politician, word_guess, phrase, alpl, turns, session_ID)
@@ -410,7 +410,7 @@ def About():
 
         # conn = sqlite3.connect('politicalhangman.db')
         # c = conn.cursor()
-        print('get')
+        # print('get')
 
         def delete_db_session():
 
@@ -521,7 +521,7 @@ def Game():
             #     return session_ID
             # session_ID = session_ID
             # session_id = session_ID
-            print('session_info_enter')
+            # print('session_info_enter')
             sessioninfo = Sessions.query.filter_by(session_id=session_id).first()
             sessioninfo.turns = turns
             sessioninfo.guess_phrase = guess_phrase
