@@ -212,6 +212,7 @@ while True:
                     break
 
                 except tweepy.TweepError as e:
+                    print('Tweepy Error')
                     print(e.reason)
                     sleep(10)
                     continue
