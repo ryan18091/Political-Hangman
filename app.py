@@ -9,7 +9,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 # import os
 #
-import os
+# import os
 # app.config.from_object('config.BaseConfig')
 
 import os
@@ -231,7 +231,7 @@ def Politician_choice():
 
         from pol_ids import t_dict
 
-        politician_id = t_dict[politician]
+        # politician_id = t_dict[politician]
 
         session_ID = session['user']
 
@@ -400,7 +400,7 @@ def Politician_choice():
         session_info_enter(politician, word_guess, phrase, alpl, turns, session_ID)
 
 
-        # return redirect(url_for('Game', image=image))
+        return redirect(url_for('Game'))
         # # return redirect(url_for('Game', image=image))
 
 
