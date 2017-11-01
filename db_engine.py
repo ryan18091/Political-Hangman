@@ -15,7 +15,7 @@ from models import *
 # access_token = config['access_token']
 # access_token_secret = config['access_token_secret']
 
-Twitter API Keys
+# Twitter API Keys
 with open('config_secret.json', 'r') as f:
     config = json.loads(f.read())
 consumer_key = "tgOf65xyMVuk98JMIJ6o8OV0w"
