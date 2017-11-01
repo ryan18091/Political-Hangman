@@ -132,7 +132,7 @@ while True:
 
                     def tweet_entry():
                         politician = politician_name
-                        politician_id = politicianid
+                        # politician_id = politicianid
                         datestamp = str(datetime.now())
                         tweet = i
                         # background_url = background
@@ -144,7 +144,7 @@ while True:
                         # print(background_url)
                         # print(profile_url)
                         # tweetupdate = tweets(politician=politician, politician_id=politician_id, datestamp=datestamp, tweet=tweet, background_url=background_url, profile_url=profile_url)
-                        tweetupdate = tweets(politician=politician, politician_id=politician_id, datestamp=datestamp, tweet=tweet)
+                        tweetupdate = tweets(politician=politician, datestamp=datestamp, tweet=tweet)
 
                         db.session.add(tweetupdate)
                         db.session.commit()
