@@ -147,7 +147,7 @@ def Hangman():
     if request.method == 'GET':
 
         # session['user'] = 'Anthony'
-        session['user'] = random.getrandbits(50)
+        session['user'] = random.getrandbits(31)
 
         # if 'user' in session:
         session_ID = session['user']
@@ -156,7 +156,7 @@ def Hangman():
 
 
         if 'user' not in session:
-            session['user'] = random.getrandbits(50)
+            session['user'] = random.getrandbits(31)
 
         # conn = sqlite3.connect('politicalhangman.db')
         # c = conn.cursor()
