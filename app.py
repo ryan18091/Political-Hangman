@@ -173,8 +173,8 @@ def Hangman():
             print(type(session_id))
             print('datestamp')
             print(type(datestamp))
-            id_enter = Sessions(session_id=session_id, datestamp=datestamp, politician=None, politician_id=None,
-                                guess_phrase=None, phrase=None, word_guess=None, turns=None, alpl=None)
+            id_enter = Sessions(session_id=session_id, datestamp=datestamp, politician=None, guess_phrase=None,
+                                phrase=None, word_guess=None, turns=None, alpl=None)
             db.session.add(id_enter)
             db.session.commit()
 
