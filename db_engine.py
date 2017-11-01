@@ -150,7 +150,7 @@ while True:
                     politicianid = politician_id
 
 
-                    delete_pre_tweet(politician)
+                    # delete_pre_tweet(politician)
 
                     # print(i)
                     if 'http' in i:
