@@ -184,6 +184,8 @@ while True:
                         tweet = i
                         background_url = background
                         profile_url = profile
+                        print(politician_name)
+                        print(tweet)
                         # print(profile_url)
                         # c.execute("INSERT  into PolTweets (politician, politician_id, datestamp, tweet) VALUES (?, ?, ?, ?)",
                         #           (politician, politician_id, datestamp, tweet))
@@ -201,8 +203,7 @@ while True:
                     # print('tweet entry')
                     # print(i)
                     tweet_entry()
-                    print(politician_name)
-                    print(tweet)
+
                     # print(politician)
                     # print(i)
                     # print(50 * '#')
