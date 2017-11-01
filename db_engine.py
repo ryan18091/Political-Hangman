@@ -135,14 +135,14 @@ while True:
                         politician_id = politicianid
                         datestamp = str(datetime.now())
                         tweet = i
-                        background_url = background
-                        profile_url = profile
+                        # background_url = background
+                        # profile_url = profile
                         print(politician)
-                        print(politician_id)
-                        print(datestamp)
-                        print(tweet)
-                        print(background_url)
-                        print(profile_url)
+                        # print(politician_id)
+                        # print(datestamp)
+                        # print(tweet)
+                        # print(background_url)
+                        # print(profile_url)
                         # tweetupdate = tweets(politician=politician, politician_id=politician_id, datestamp=datestamp, tweet=tweet, background_url=background_url, profile_url=profile_url)
                         tweetupdate = tweets(politician=politician, politician_id=politician_id, datestamp=datestamp, tweet=tweet)
 
