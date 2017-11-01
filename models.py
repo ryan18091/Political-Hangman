@@ -7,11 +7,11 @@ class Sessions(db.Model):
     session_id = db.Column(db.Integer,unique=False, nullable=True)
     politician = db.Column(db.String,unique=False, nullable=True)
     politician_id = db.Column(db.String,unique=False, nullable=True)
-    datestamp = db.Column(db.String,unique=False, nullable=True)
+    datestamp = db.Column(db.Integer,unique=False, nullable=True)
     guess_phrase = db.Column(db.String,unique=False, nullable=True)
     phrase = db.Column(db.String,unique=False, nullable=True)
     word_guess = db.Column(db.String,unique=False, nullable=True)
-    turns = db.Column(db.String,unique=False, nullable=True)
+    turns = db.Column(db.Integer,unique=False, nullable=True)
     alpl = db.Column(db.String,unique=False, nullable=True)
 
 
