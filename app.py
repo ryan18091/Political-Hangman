@@ -10,7 +10,7 @@ app = Flask(__name__)
 # import os
 #
 import os
-app.config.from_object('config.BaseConfig')
+# app.config.from_object('config.BaseConfig')
 
 import os
 app.config.from_object(os.environ['APP_SETTINGS'])
