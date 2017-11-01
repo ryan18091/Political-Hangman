@@ -9,10 +9,15 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 # import os
 #
-# app.config.from_object(os.environ['APP_SETTINGS'])
+import os
+app.config.from_object('config.BaseConfig')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///political_hangmanPSQL.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+import os
+app.config.from_object(os.environ['APP_SETTINGS'])
+print(os.environ['APP_SETTINGS'])
+
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///political_hangmanPSQL.db'
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
@@ -26,7 +31,7 @@ word_guess = []
 turns = ()
 
 # app = Flask(__name__)
-app.secret_key = '\xfd{H\xe5<\x95\xf9\xe3\x96.5\xd1\x01O<!\xd5\xa2\xa0\x9fR"\xa1\xa8'
+# app.secret_key = '\xfd{H\xe5<\x95\xf9\xe3\x96.5\xd1\x01O<!\xd5\xa2\xa0\x9fR"\xa1\xa8'
 
 
 
@@ -124,6 +129,13 @@ def get_politician(session_id):
     # print('politician')
 
     return politician
+
+def get_backgroun_url(politician_name):
+    backgroundget = tweets.query.filter_by(politician=politician_name).first()
+    image = backgroundget.background_url
+    print(image)
+    print('test1')
+    return image
 
 
 
@@ -249,6 +261,9 @@ def Politician_choice():
         tweet = tweets.query.filter_by(politician=politician_name).first()
         word = tweet.tweet
 
+        image = get_backgroun_url(politician_name)
+
+
         # print('tweet')
         # print(word)
 
@@ -364,7 +379,12 @@ def Politician_choice():
 
         session_info_enter(politician, politician_id, word_guess, phrase, alpl, turns, session_ID)
 
-        return redirect(url_for('Game'))
+        print('test')
+        print(image)
+        print('test')
+
+        return redirect(url_for('Game', image=image))
+        # return redirect(url_for('Game', image=image))
 
 
 @app.route('/About', methods=['GET'])
@@ -672,10 +692,10 @@ def Game():
 
 
 if __name__ == '__main__':
-    # app.run(debug=True, use_relaoder=True)
-    app.debug = False
-    host = os.environ.get('IP', '0.0.0.0')
-    # port = int(os.environ.get('PORT', 8080))
-    port = int(os.environ.get('PORT', 8910))
+    app.run()
+    # app.debug = False
 
-    app.run(host=host, port=port)
+    # host = os.environ.get('IP', '0.0.0.0')
+    # port = int(os.environ.get('PORT', 8910))
+    #
+    # app.run(host=host, port=port)
