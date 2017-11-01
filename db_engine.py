@@ -159,11 +159,11 @@ while True:
                     politicianid = politician_id
 
                     if selection == None:
-                        print('No pre-tweet')
+                        # print('No pre-tweet')
                         tweet_entry()
                         continue
                     if politician == selection.politician:
-                        print('Updated Tweet')
+                        # print('Updated Tweet')
                         delete_pre_tweet(politician)
                         tweet_entry()
 
