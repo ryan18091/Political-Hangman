@@ -10,12 +10,16 @@ app = Flask(__name__)
 # import os
 #
 # import os
+
+#for local
 # app.config.from_object('config.BaseConfig')
 
+
+#for Heroku
 import os
 app.config.from_object(os.environ['APP_SETTINGS'])
-# print(os.environ['APP_SETTINGS'])
 
+#for local
 # DEBUG = False
 # SECRET_KEY = '\xc0\xc3\xe42\xb6\x0cl\x93\xfd\x8e\xfd(\xb7\x8de\x9an\x86\x19\xea\x87\xb5\x1f\xea'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///political_hangmanPSQL.db'
@@ -47,6 +51,13 @@ def get_phrase(session_id):
 
     return phrase
 
+# def screen_name(politician):
+#
+#     screenget = tweets.query.filter_by(politician=politician).first()
+#     screen_name = screenget.screen_name
+#
+#
+#     return screen_name()
 
 def get_word_guess(session_id):
 
@@ -201,17 +212,18 @@ def Hangman():
         #         '1', '2', '3', '4', '5', '6', '8', '9', '0', '@', '#']
 
 
-        return render_template('twitter2.html')
-
+        # return render_template('twitter2.html')
+        return render_template('index.html')
 
     elif request.method == 'POST':
 
         # currently nothing gets posted to the homepage/ not used
 
-        return render_template('twitter2.html')
+        # return render_template('twitter2.html')
+        return render_template('index.html')
 
 
-@app.route('/Politician_choice', methods=['POST', 'GET'])
+@app.route('/indexPolChoice', methods=['POST', 'GET'])
 def Politician_choice():
     # global politician_id
 
@@ -220,7 +232,7 @@ def Politician_choice():
         # if 'user' in session:
 
 
-        return render_template('Politician_choice.html')
+        return render_template('indexPolChoice.html')
 
     elif request.method == 'POST':
 
@@ -266,6 +278,9 @@ def Politician_choice():
 
         tweet = tweets.query.filter_by(politician=politician_name).first()
         word = tweet.tweet
+        screen = tweets.query.filter_by(politician=politician_name).first()
+        screen_name = screen.screen_name
+        print(screen_name)
 
         # image = get_backgroun_url(politician_name)
 
@@ -400,7 +415,10 @@ def Politician_choice():
         session_info_enter(politician, word_guess, phrase, alpl, turns, session_ID)
 
 
-        return redirect(url_for('Game'))
+        return redirect(url_for('Game', screen_name=screen_name))
+        # return redirect(url_for('gameplay.html'))
+        # return render_template('gameplay.html')
+
         # # return redirect(url_for('Game', image=image))
 
 
@@ -458,6 +476,7 @@ def Game():
         alpl = get_alpl(session_id)
         turns = get_turns(session_id)
         politician = get_politician(session_id)
+
 
 
         # print('Test123')
@@ -529,15 +548,21 @@ def Game():
 
         session_info_enter(turns, guess_phrase, session_id)
 
-        guess_head = 'The latest tweet from %r' % politician
+        # guess_head = 'The latest tweet from %r' % politician
+        guess_head = politician
+        print(guess_head)
+
 
         # conn = sqlite3.connect('politicalhangman.db')
         # c = conn.cursor()
 
-
+        screen = tweets.query.filter_by(politician=politician).first()
+        screen_name = screen.screen_name
 
         return render_template('Game.html', guess_head=guess_head, turns=turns, guess_phrase=guess_phrase,
-                               remaining_letters=remaining_letters)
+                               remaining_letters=remaining_letters, screen_name=screen_name)
+        # return render_template('gameplay.html.html', guess_head=guess_head, turns=turns, guess_phrase=guess_phrase,
+        #                    remaining_letters=remaining_letters)
 
     elif request.method == 'POST':
 
@@ -554,7 +579,7 @@ def Game():
         # GEt all variables from game_db return variables
 
 
-        guess_head = 'The latest tweet from %r' % politician
+        guess_head =  politician
         message_line = ' '
 
         choice = request.form['Char_Choice']
@@ -695,14 +720,19 @@ def Game():
         session_info_enter(turns, guess_phrase, alpl, word_guess, session_id)
 
         # print(guess_phrase)
+        screen = tweets.query.filter_by(politician=politician).first()
+        screen_name = screen.screen_name
 
         return render_template('Game.html', guess_head=guess_head, remaining_letters=remaining_letters, turns=turns,
-                               message_line=message_line, guess_phrase=guess_phrase, choice=choice)
+                               message_line=message_line, guess_phrase=guess_phrase, choice=choice, screen_name=screen_name)
+        # return render_template('gameplay.html', guess_head=guess_head, remaining_letters=remaining_letters, turns=turns,
+        #                        message_line=message_line, guess_phrase=guess_phrase, choice=choice)
 
 
 if __name__ == '__main__':
     app.run()
-    # app.debug = False
+    app.debug = True
+
 
     # host = os.environ.get('IP', '0.0.0.0')
     # port = int(os.environ.get('PORT', 8910))
