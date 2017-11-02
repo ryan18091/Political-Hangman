@@ -67,7 +67,7 @@ while True:
             if (not tweet.retweeted) and ('RT @' not in tweet.full_text):
                 try:
                     t = (tweet)
-                    print(t)
+                    # print(t)
                     i = (tweet.full_text)
                     # created_at = (tweet.created_at)
                     # print(created_at)
