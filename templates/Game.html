@@ -1,171 +1,163 @@
-<!--Mobile Issue with header turning blue on shrinking page-->
-
 <!DOCTYPE html>
-<html>
-    <head class="is-mobile">
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-      <link rel="stylesheet" id="bulma" href="static/Bulma.css" />
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/creative.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="static/css/twitter-feed.css">
+
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Political Hangman</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{{url_for('About') }}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="https://github.com/RyanErickson74">Git Hub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead" style="height: 700px;">
+
+{#                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">#}
+{#                <link rel="stylesheet" id="bulma" href="static/Bulma.css" />#}
 {#      <link rel="stylesheet" type="text/css" href="static/gamecss.css">#}
-      <link rel="stylesheet" type="text/css" href="static/twitter-2.css">
+{#                <link rel="stylesheet" type="text/css" href="static/twitter-2.css">#}
 
+{#      <div class="header-content" style="padding-top: 50px; top: 400px;">#}
+{#        <div class="header-content-inner">#}
+{#            <section class="hero is-fullheight is-default is-bold" style="background-color: transparent" >#}
+{#            <div class="hero-body" style="background-color: transparent">#}
+        <div class="container" style="background-color:transparent;width: 530px;border-right-width: 10px;margin-top: 0px;padding-top: 70px;">{#                <div class="column is-centered">#}
+{#                  <div class="column is-5">#}
+{#                      <div class="block">#}
+{#                        <div class="box" id="guessblock" style="background: white; border-radius: 10px;width: 700px;">#}
+                        <div class="box" id="guessblock" style="position:relative; background: white; border-radius: 10px;width: 500px">
 
+{#                        <figure class="is-centered" style="text-align: left;padding-left: 30px;border-left-width: 10px">#}
+                        <figure style="text-align: left;padding-left: 30px;border-left-width: 15px">
+                            <h5 style="color: black;font-family: 'Helvetica Neue';padding-top: 30px;padding-left: 30px;"><strong>{{ guess_head }} </strong><img style="max-width: 16px; max-height: 16" src="static/img/twittercheck.png" </h5>
+                            <h5 style="color: gray; padding-left: 30px;font-size: 13px">@{{ screen_name }}</h5>
+                            <pre id="pretag" style="position:relative; color: black;font-family: 'Helvetica Neue';font-size: 25px;padding-left: 30px;border-left-width: 10px;padding-bottom: 30px;width: 430px;">{{guess_phrase}}</pre>
+{#                            <pre id="pretag" style="position:relative;float:left;top: 50%;left: 50%;transform: translate(-50%, -50%);">{{guess_phrase}}</pre>#}
 
-    </head>
-
-    <!--<video id="video-background" autoplay="" loop="" muted="" poster="/Users/ryan.erickson/PycharmProjects/-->
-    <!--Full-Stack/Twitter_App/images/TrumpIMG.jpg">-->
-        <!--&lt;!&ndash;<source src="https://s3.amazonaws.com/distill-videos/videos/processed/2180/lighthouse.mp4" type="video/mp4">&ndash;&gt;-->
-        <!--<source src="" type="video/mp4">-->
-    <!--</video>-->
-
-        <section class="hero is-primary is-medium header-image background={{ image }}">
-            <div class="hero-head">
-
-              <header class="nav">
-                <div class="container">
-                  <span class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </span>
-                    <div class="nav-left nav-menu">
-                        <h1 class="nav-item is-active is-6" id="Header">
-                            Political Hangman
-                        </h1>
-                    </div>
-                  <div class="nav-right nav-menu">
-                    <a class="nav-item is-active" href="{{url_for('About') }}">
-                      About
-                    </a>
-                  </div>
-                </div>
-              </header>
-
-        <body>
-
-          <section class="hero is-fullheight is-default is-bold" style="background-color: transparent" >
-            <div class="hero-body" style="background-color: transparent">
-              <div class="container has-text-centered" style="background-color: transparent">
-                <div class="columns is-vcentered">
-                  <div class="column is-5">
-                      <div class="block">
-                        <div class="box" id="guessblock" style="background: rgba(255,255,255,0.3);">
-                        <figure class=" is-4by3">
-                            <h1 style="color: white">{{guess_head}}</h1>
-                            <pre id="pretag" style="color: white; font-family: ">{{guess_phrase}}</pre>
                         </figure>
                         </div>
                       </div>
-                  </div>
-                  <div class="column is-6 is-offset-1">
-                    <h1 class="title is-2">
+{#                  </div>#}
+                  <div class="column is-6 is-offset-1" style="height: 400px;">
+                    <h1 class="title is-2" style="font-size: 30px;text-shadow: black 0px 0px 5px">
                       Remaining Characters
                     </h1>
-                        <p>{{remaining_letters}}</p>
+                        <p style="margin-bottom: 0px;text-shadow: black 0px 0px 5px">{{remaining_letters}}</p>
                       <br>
                     <p class="has-text-centered">
                       <form id="form" role="form" action="" method="POST">
-                    <div class="form-group">
-                        <label form="title">Letter Choice</label>
+
+                        <label form="title" style="margin-top: 0px">Letter Choice</label>
                         <input type="text" name="Char_Choice">
                         <input type="submit">
-                    </div>
-                </form>
-                <h2><strong style="color: white">{{message_line}}</strong></h2>
-                <h3>You have {{turns}} turns remaining</h3>
-                    </p>
+                  </form>
+                <h2><strong style="color: white;font-size: 20px;font-family: 'Open Sans';text-shadow: black 0px 0px 5px"">{{message_line}}</strong></h2>
+                <h3 style="color: white;font-size: 20px;font-family: 'Open Sans';text-shadow: black 0px 0px 5px"">Turns Remaining: {{turns}}</h3>
+{#                    </p>#}
                   </div>
                 </div>
-              </div>
-            </div>
-           </section>
-
-        <!--<section class="hero is-primary header-image">-->
-            <!--<div class="hero-head">-->
-
-              <!--<header class="nav">-->
-                <!--<div class="container">-->
-                  <!--<span class="nav-toggle">-->
-                    <!--<span></span>-->
-                    <!--<span></span>-->
-                    <!--<span></span>-->
-                  <!--</span>-->
-                    <!--<div class="nav-center nav-menu">-->
-                        <!--<h1>Remaining Characters  :</h1>-->
-                        <!--<p>{{remaining_letters}}</p>-->
-
-                    <!--</div>-->
-
-                <!--</div>-->
-                                      <!--<div class="nav-center nav-menu">-->
-                  <!--<form id="form" role="form" action="" method="POST">-->
-                    <!--<div class="form-group">-->
-                        <!--<label form="title">Letter Choice</label>-->
-                        <!--<input type="text" name="Char_Choice">-->
-                        <!--<input type="submit">-->
-                    <!--</div>-->
-                <!--</form>-->
-                <!--<h2><strong>{{message_line}}</strong></h2>-->
-                                      <!--</div>-->
-              <!--</header>-->
-
-                <!--</div>-->
-
-    <!--<div class="hero-body">-->
-      <!--<div class="container">-->
-          <!--<div class="block">-->
-              <!--<div class="box" style="background-color: transparent;border: #09b4ff">-->
-        <!--&lt;!&ndash;<div class="column is-6 is-offset-3">&ndash;&gt;-->
-            <!--<h1>{{guess_head}}</h1>-->
-            <!--<h3>You have {{turns}} turns remaining</h3>-->
-            <!--<pre id="pretag">{{guess_phrase}}</pre>-->
-              <!--</div>-->
-          <!--</div>-->
-
-    <!--</div>-->
-
-
-        <!--</section>-->
-
-         <!--<section class="container">-->
-             <!---->
-             <!--<form id="form" role="form" action="" method="POST">-->
-                    <!--<div class="form-group">-->
-                        <!--<label form="title">Letter Choice</label>-->
-                        <!--<input type="text" name="Char_Choice">-->
-                        <!--<input type="submit">-->
-                    <!--</div>-->
-                <!--</form>-->
-                <!--<h2><strong>{{message_line}}</strong></h2>-->
-                <!--<h3>You have {{turns}} turns remaining</h3>-->
-
-         <!--</section>-->
+{#              </div>#}
+{#            </div>#}
+{#           </section>#}
+{##}
+{#        </div>#}
+    </header>
 
 
 
 
-        </body>
 
-        <section>
-          <footer class="footer" style="color: gray">
-            <div class="container">
-              <div class="content has-text-centered">
-                <p>
-                   By <a href="https://www.linkedin.com/in/ryan-erickson-b7ab3948/"><i class="fa fa-linkedin"
-                   aria-hidden="true"></i> Ryan Erickson</a>. Developed using Python 3, Flask, and Bulma.
-                </p>
-                <p>
-                  <a class="icon" href="https://github.com/RyanErickson74">
-                    <i class="fa fa-github"></i>
-                  </a>
-                </p>
-              </div>
-            </div>
-          </footer>
-        </section>
+ <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
 
-        </body>
+    <!-- Custom fonts for this template -->
+    <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/creative.min.css" rel="stylesheet">
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Enjoy!</h2>
+            <hr class="primary">
+            <p>Developed using Python 3, Flask, Bootstrap, Twitter API, and served on Heroku.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-linkedin fa-3x sr-contact"></i>
+              <p>
+              <a href="https://www.linkedin.com/in/ryan-erickson-b7ab3948/">Ryan Erickson</a>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+            <p>
+              <a href="mailto:your-email@your-domain.com">feedback@politicalhangman@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../static/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="../static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="static/js/creative.min.js"></script>
+
+  </body>
+
 </html>

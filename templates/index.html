@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +23,6 @@
 
     <!-- Custom styles for this template -->
     <link href="static/css/creative.min.css" rel="stylesheet">
-    <link href="static/css/lose.css" rel="stylesheet">
-
 
   </head>
 
@@ -51,28 +48,30 @@
       </div>
     </nav>
 
-    <header id="lose" class="masthead" <img src="static/img/lose.jpg">
+    <header class="masthead" >
       <div class="header-content">
-              <div class="container has-text-centered">
-                <div class="column is-6 is-offset-3">
-                  <h1 class="title" style="text-shadow: black 0px 0px 5px">
-                    You are not a true patriot...
-                  </h1>
-                     <p style="text-shadow: black 0px 0px 5px">{{phrase}}</p>
-                  <div class="button">
-                      <div class="content">
-{#                    <a href="/">Play Again</a>#}
-                          <a href="/" class="btn btn-outline-danger btn-lg" role="button">Play Again</a>
-{#                    <a href="https://www.google.com/">Exit</a>#}
-                          <a href=https://www.google.com/" class="btn btn-outline-danger btn-lg" role="button">Exit</a>
-
-                    </div>
-                  </div>
-                </div>
-{#          <p style="text-shadow: black 0px 0px 5px">{{phrase}}</p>#}
-      </div>
+        <div class="header-content-inner">
+            <h1 id="homeHeading">Political Hangman</h1>
+              <h1>A new twist on an old game</h1>
+          <hr>
+          <p>"Wise men speak because they have something to say, fools because they have to say something" </p>
+          <p>Plato</p>
+        </div>
       </div>
     </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Do you think you can win?</h2>
+            <hr class="light">
+            <p class="text-faded">To often we cast judgement based upon glancing at a few characters in a tweet. Take a moment longer with a tweet through playing the game.</p>
+            <a class="btn btn-default btn-xl js-scroll-trigger" href="{{url_for('Politician_choice') }}">Politician Choice</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <section id="contact">
