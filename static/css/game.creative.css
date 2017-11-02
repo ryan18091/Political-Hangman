@@ -1,0 +1,19 @@
+#tweet {
+    box-sizing: border-box;
+    color: rgb(33, 37, 41);
+    display: block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: normal;
+    height: 1011.59px;
+    line-height: 24px;
+    margin-left: 251px;
+    margin-right: 251px;
+    max-width: 736px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    text-size-adjust: 100%;
+    width: 736px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

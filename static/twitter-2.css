@@ -30,6 +30,8 @@ body {
     background-color: transparent;
     color: white;
     font-size: large;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji",
+  "Segoe UI Emoji","Segoe UI Symbol";
 }
 
 #latesttweet {
@@ -43,10 +45,7 @@ body {
 }
 
 #pc {
-  margin-left: 10rem;
-  margin-right: 6rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  /*background-color: transparent;*/
 }
 
 #Legislative {
@@ -139,11 +138,27 @@ font-size: 100px;
   line-height: 1.5;
 }
 
-.hero.is-primary {
-    /*background-color: #1fc8db;*/
-    /* color: white; */
+
+
+#pretag {
+  margin: 5rem;
+    /*white-space: pre-wrap;       !* Since CSS 2.1 *!*/
+    /*white-space: -moz-pre-wrap;  !* Mozilla, since 1999 *!*/
+    /*white-space: -o-pre-wrap;    !* Opera 7 *!*/
+    /*word-wrap: break-word;       !* Internet Explorer 5.5+ *!*/
+    background-color: transparent;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+;
+
 }
 
-#guessblock{
+pre {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
 
+code, pre {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    line-height: 1.25;
 }

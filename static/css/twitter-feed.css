@@ -1,0 +1,15 @@
+.cont {float:left;width :400px;background-color:#000;}
+.cont .left {float:left;width :200px;}
+.cont .right {float:left;width :200px;}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+
+.cont {width :200px; background-color:#666666 !important;}
+.cont .left {width :100px !important;}
+.cont .right {width :100px !important;}
+
+}
