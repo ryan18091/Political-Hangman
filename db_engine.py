@@ -59,7 +59,7 @@ while True:
 
     for politician, politician_id in t_dict.items():
 
-        # time.sleep(6)
+        time.sleep(6)
         print("Twitter API Engine Running...")
         for tweet in tweepy.Cursor(api.user_timeline, id=politician_id, tweet_mode='extended').items(10):
 
@@ -77,7 +77,7 @@ while True:
 
                     screen_name = (tweet.user)
                     screen_name = (screen_name.screen_name)
-                    print(screen_name)
+                    # print(screen_name)
 
 
 
@@ -95,7 +95,7 @@ while True:
 
 
                     background = (find_between1('profile_banner_url' , 'profile_link_color'))
-                    print(background)
+                    # print(background)
 
                     def find_between2(first, last):
                         try:
@@ -110,7 +110,7 @@ while True:
 
 
                     profile = (find_between2('profile_image_url', 'profile_image_url_https'))
-                    print(profile)
+                    # print(profile)
 
 
 
