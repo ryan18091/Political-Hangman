@@ -14,15 +14,16 @@
     <link href="static/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="static/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="static/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="static/css/creative.min.css" rel="stylesheet">
+    <link href="static/css/politician.css" rel="stylesheet">
 
   </head>
 
@@ -37,9 +38,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{url_for('About') }}">About</a>
-            </li>
+{#            <li class="nav-item">#}
+{#              <a class="nav-link js-scroll-trigger" href="{{url_for('About') }}">About</a>#}
+{#            </li>#}
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="https://github.com/RyanErickson74">Git Hub</a>
             </li>
@@ -48,22 +49,18 @@
       </div>
     </nav>
 
-    <header class="masthead">
-      <div class="header-content">
-        <div class="header-content-inner">
-          <p>"Wise men speak because they have something to say, fools because they have to say something" </p>
-          <p>Plato</p>
-        </div>
-      </div>
-    </header>
-
-
-
-    <section id="services" style="background-color: gainsboro">
+    <header id="politician" class="masthead">
+{#      <div class="header-content">#}
+{#        <div class="header-content-inner">#}
+{#          <p>"Wise men speak because they have something to say, fools because they have to say something" </p>#}
+{#          <p>Plato</p>#}
+{#        </div>#}
+{#      </div>#}
+        <section id="services" style="background-color: transparent">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Choose your Politician from the lists below</h2>
+            <h2 class="section-heading" style="text-shadow: black 0px 0px 5px"">Choose your Politician from the lists below</h2>
             <hr class="primary">
           </div>
         </div>
@@ -73,12 +70,12 @@
           <div class="col-lg-4 col-md-6 text-center">
             <div class="service-box">
               <i class="fa fa-4x fa-university text-primary sr-icons"></i>
-              <h3>Executive</h3>
+              <h3 style="text-shadow: black 0px 0px 5px"">Executive</h3>
                   <form id="form1" role="form" action="" method="POST">
                         <div class="form-group">
                         <p class="control">
                             <span class="select">
-                                <select style="width: 220px" name="polititian">
+                                <select style="width: 220px" name="polititian" onchange="this.form.submit()">
                                   <option class="is-unselectable">Select dropdown</option>
                                     <option value="Donald Trump">President - Donald Trump<strong</option>
                                     <option value="Mike Pence">Vice President - Mike Pence</option>
@@ -119,7 +116,7 @@
                                     <!--<option value="Scott Pruitt">Administrator of the E.P.A. - Scott Pruitt</option>-->
                                     <!--<option value="Linda E. McMahon">Administrator of the Small Business Administration - Linda E. McMahon</option>-->
                                 </select>
-                                <input type="submit" name="polititian">
+{#                                <input type="submit" name="polititian">#}
                             </span>
                         </p>
                     </div>
@@ -129,12 +126,12 @@
           <div class="col-lg-4 col-md-6 text-center">
             <div class="service-box">
               <i class="fa fa-4x fa-handshake-o text-primary sr-icons"></i>
-              <h3>Senate</h3>
+              <h3 style="text-shadow: black 0px 0px 5px">Senate</h3>
              <form id="form2" role="form" action="" method="POST">
                         <div class="form-group">
                         <p class="control">
                             <span class="select">
-                                <select style="width: 220px" name="polititian">
+                                <select style="width: 220px" name="polititian" onchange="this.form.submit()">
                                     <option class="is-unselectable">Select dropdown</option>
                                     <option value="Richard Shelby">AL: R - Richard Shelby</option>
                                     <option value="Luther Strange">AL: R - Luther Strange</option>
@@ -237,7 +234,7 @@
                                     <!--<option value="Mike Enzi">WY: R - Mike Enzi</option>-->
                                     <!--<option value="John Barrasso">WY: R - John Barrasso</option>-->
                                 </select>
-                                <input type="submit" name="polititian">
+{#                                <input type="submit" name="polititian">#}
                             </span>
                         </p>
                       </button>
@@ -248,12 +245,12 @@
           <div class="col-lg-4 col-md-6 text-center">
             <div class="service-box">
               <i class="fa fa-4x fa-home text-primary sr-icons"></i>
-              <h3>House</h3>
+              <h3 style="text-shadow: black 0px 0px 5px">House</h3>
              <form id="forms" role="form" action="" method="POST">
                         <div class="form-group">
                         <p class="control">
                             <span class="select">
-                                <select style="width: 220px" name="polititian">
+                                <select style="width: 220px" name="polititian" onchange="this.form.submit()">
                                     <option class="is-unselectable">Select dropdown</option>
                                     <option value="Bradley Byrne">Al: R - Bradley Byrne</option>
                                     <option value="Martha Roby">AL: R - Martha Roby</option>
@@ -267,7 +264,7 @@
                                     <option value=""></option>
 
                                 </select>
-                                <input type="submit" name="polititian">
+{#                                <input type="submit" name="polititian">#}
                             </span>
                         </p>
                     </div>
@@ -277,6 +274,10 @@
         </div>
       </div>
     </section>
+    </header>
+
+
+
 
 
     <section id="contact">
@@ -311,7 +312,7 @@
     <!-- Plugin JavaScript -->
     <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="../static/vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="../static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="../static/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="../static/js/creative.min.js"></script>

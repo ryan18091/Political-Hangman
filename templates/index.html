@@ -14,12 +14,12 @@
     <link href="static/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="static/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="static/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="static/css/creative.min.css" rel="stylesheet">
@@ -37,9 +37,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{url_for('About') }}">About</a>
-            </li>
+{#            <li class="nav-item">#}
+{#              <a class="nav-link js-scroll-trigger" href="{{url_for('About') }}">About</a>#}
+{#            </li>#}
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="https://github.com/RyanErickson74">Git Hub</a>
             </li>
@@ -51,11 +51,11 @@
     <header class="masthead" >
       <div class="header-content">
         <div class="header-content-inner">
-            <h1 id="homeHeading">Political Hangman</h1>
-              <h1>A new twist on an old game</h1>
+            <h1 id="homeHeading" style="text-shadow: black 0px 0px 5px">Political Hangman</h1>
+              <h1 style="text-shadow: black 0px 0px 5px">A new twist on an old game</h1>
           <hr>
-          <p>"Wise men speak because they have something to say, fools because they have to say something" </p>
-          <p>Plato</p>
+          <p style="text-shadow: black 0px 0px 5px">"Wise men speak because they have something to say, fools because they have to say something" </p>
+          <p style="text-shadow: black 0px 0px 5px">Plato</p>
         </div>
       </div>
     </header>
@@ -106,7 +106,7 @@
     <!-- Plugin JavaScript -->
     <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="../static/vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="../static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="../static/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="static/js/creative.min.js"></script>
