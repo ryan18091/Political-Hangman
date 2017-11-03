@@ -12,12 +12,12 @@ app = Flask(__name__)
 # import os
 
 #for local
-app.config.from_object('config.BaseConfig')
+# app.config.from_object('config.BaseConfig')
 
 
 #for Heroku
-# import os
-# app.config.from_object(os.environ['APP_SETTINGS'])
+import os
+app.config.from_object(os.environ['APP_SETTINGS'])
 
 #for local
 # DEBUG = False
