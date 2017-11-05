@@ -18,7 +18,20 @@ t_dict = {'Donald Trump': 25073877, 'Bernie Sanders': 216776631,'Mike Pence': 22
           'John N. Kennedy':816683274076614656,'Susan Collins':19726613,'Angus King':1068481578,
           'Ben Cardin':109071031,'Chris Van Hollen':18137749,'Elizabeth Warren':70207298,'Ed Markey':21406834,
           'Debbie Stabenow':76456274,'Gary Peters':236511574,'Amy Klobuchar':33537967,'Al Franken':171968009,
-          'Thad Cochran':555474658,'Roger Wicker':264219447,'Claire McCaskill':57065141}
+          'Thad Cochran':555474658,'Roger Wicker':264219447,'Claire McCaskill':57065141,'Roy Blunt':21269970,
+          'Jon Tester':515822213,'Steve Daines':11651202,'Deb Fischer':1071402577,'Ben Sasse':2962923040,
+          'Dean Heller':266133081,'Catherine Cortez Masto':811313565760163844,'Jeanne Shaheen':109287731,
+          'Maggie Hassan':946549322,'Bob Menendez':18695134,'Cory Booker':2167097881,'Tom Udall':60828944,
+          'Martin Heinrich':1099199839,'Chuck Schumer':17494010,'Kirsten Gillibrand':72198806,'Richard Burr':21157904,
+          'Thom Tillis':2964174789,'John Hoeven':382791093,'Heidi Heitkamp':1061029050,'Sherrod Brown':43910797,
+          'Rob Portman':18915145,'Jim Inhofe':7270292,'James Lankford': 225921757,'Ron Wyden':250188760,
+          'Jeff Merkley': 29201047,'Bob Casey Jr.': 171598736,'Pat Toomey':221162525,'Jack Reed':486694111,
+          'Sheldon Whitehouse':242555999,'Lindsey Graham':432895323,'Tim Scott':217543151,'John Thune':296361085,
+          'Mike Rounds':2955485182,'Lamar Alexander':76649729,'Bob Corker':73303753,'John Cornyn':73303753,
+          'Ted Cruz':23022687,'Orrin Hatch':262756641,'Mike Lee':88784440,'Patrick Leahy':242836537,
+          'Mark Warner': 7429102,'Tim Kaine':172858784,'Patty Murray':293131808,'Maria Cantwell':117501995,
+          'Joe Manchin':234374703,'Shelley Moore Capito':193794406,'Ron Johnson':233737858,'Tammy Baldwin':1074518754,
+          'Mike Enzi': 291756142,'John Barrasso':202206694}
 
 
 
