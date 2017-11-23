@@ -160,8 +160,8 @@ def Hangman():
         # session['user'] = 'Anthony'
         # session['user'] = random.getrandbits(31)
 
-        # if 'user' in session:
-        #     session_ID = session['user']
+        if 'user' in session:
+            session['user'] = random.getrandbits(31)
         # print(session_ID)
             # return session_ID
 
