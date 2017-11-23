@@ -590,6 +590,7 @@ def Game():
         if choice not in alpl:
             message_line = "That letter has already been chosen."
 
+        phrase = phrase.lower()
         if choice not in phrase:
             message_line = 'That choice is not in the phrase'
             turns = (turns - 1)
