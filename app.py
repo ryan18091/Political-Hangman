@@ -12,12 +12,12 @@ app = Flask(__name__)
 # import os
 
 #for local
-# app.config.from_object('config.BaseConfig')
+app.config.from_object('config.BaseConfig')
 
 
 #for Heroku
-import os
-app.config.from_object(os.environ['APP_SETTINGS'])
+# import os
+# app.config.from_object(os.environ['APP_SETTINGS'])
 
 #for local
 # DEBUG = False
@@ -158,12 +158,14 @@ def Hangman():
     if request.method == 'GET':
 
         # session['user'] = 'Anthony'
-        session['user'] = random.getrandbits(31)
+        # session['user'] = random.getrandbits(31)
 
-        # if 'user' in session:
-        session_ID = session['user']
+        if 'user' in session:
+            session_ID = session['user']
         # print(session_ID)
             # return session_ID
+
+
 
 
         if 'user' not in session:
@@ -591,7 +593,6 @@ def Game():
         if choice not in phrase:
             message_line = 'That choice is not in the phrase'
             turns = (turns - 1)
-            # --- This throw an error not (local variable turns referenced before assignment)
 
         if choice == '@' or '#':
             for letter in range(len(phrase)):
