@@ -160,8 +160,8 @@ def Hangman():
         # session['user'] = 'Anthony'
         # session['user'] = random.getrandbits(31)
 
-        if 'user' in session:
-            session_ID = session['user']
+        # if 'user' in session:
+        #     session_ID = session['user']
         # print(session_ID)
             # return session_ID
 
@@ -199,7 +199,7 @@ def Hangman():
             # conn.commit()
 
 
-        # print(session_ID)
+        session_ID = session['user']
         session_id_enter(session_ID)
 
         # Game resets on returning to the front page
