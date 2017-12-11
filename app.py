@@ -162,11 +162,6 @@ def Hangman():
 
         if 'user' in session:
             session['user'] = random.getrandbits(31)
-        # print(session_ID)
-            # return session_ID
-
-
-
 
         if 'user' not in session:
             session['user'] = random.getrandbits(31)
@@ -247,6 +242,8 @@ def Politician_choice():
 
         # politician_id = t_dict[politician]
 
+        if 'user' not in session:
+            session['user'] = random.getrandbits(31)
         session_ID = session['user']
 
 
