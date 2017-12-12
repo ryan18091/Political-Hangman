@@ -10,7 +10,6 @@ from ParserEmail import *
 wb = load_workbook(filename='ReportSpreadsheet.xlsx')
 WebParserReport = wb['WebParserReport']
 old_data = (WebParserReport['B4']).value
-print(old_data)
 
 class OldDataConvert:
 
@@ -76,10 +75,6 @@ class DataInput_and_Checker:
 
 
     def dataDiff(self):
-        print('dataDiff')
-        print(old_data)
-        print('new',new_data)
-        print(len(new_data))
         diff_data = (set(old_data)) - set(new_data)
         return diff_data
 
@@ -91,15 +86,13 @@ DbInput = DataInput_and_Checker(new_data, old_data)
 
 #checks for differences in Old vs New Data
 diff = []
-print(old_data)
-print(new_data)
+
 for i in old_data.split():
     if i not in new_data.split():
         diff.append(i)
 
 
 if len(diff) == 0:
-    print('True')
     diff = 'No Politician Change Found.'
 
 
