@@ -14,6 +14,7 @@ from email import encoders
 
 
 def PH_Email():
+    print('PH_EMAIL')
 
     # email_user = 'ryanerickson74@gmail.com'
     # email_password = 'erickson74'
