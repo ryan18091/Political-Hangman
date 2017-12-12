@@ -14,7 +14,6 @@ WebParserReport = wb['WebParserReport']
 old_data = (WebParserReport['B4']).value
 print(old_data)
 
-
 class OldDataConvert:
 
     def __init__(self, old_data):
