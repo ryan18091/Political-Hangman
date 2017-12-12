@@ -1,13 +1,11 @@
 import datetime as time
-import sqlite3
 import urllib.parse
 import urllib.request
 
 import bs4 as bs
 from openpyxl import load_workbook
 
-from Email_Reporter.ParserEmail import *
-
+from ParserEmail import *
 
 wb = load_workbook(filename='ReportSpreadsheet.xlsx')
 WebParserReport = wb['WebParserReport']
