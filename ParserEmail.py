@@ -3,6 +3,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
+import os
 # from boto.s3.connection import S3Connection
 # import os
 #
@@ -21,9 +22,9 @@ def PH_Email():
     # email_send = 'ryanerickson74@gmail.com'
     # subject = '-PH REPORT-.'
 
-    email_user = 'EMAIL_USER'
-    email_password = 'EMAIL_PASSWORD'
-    email_send = 'EMAIL_SEND'
+    email_user = (os.environ['EMAIL_USER'])
+    email_password = (os.environ['EMAIL_PASSWORD'])
+    email_send = (os.environ['EMAIL_SEND'])
     subject = '-PH REPORT-.'
 
     msg = MIMEMultipart()

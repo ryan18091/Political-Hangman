@@ -11,7 +11,6 @@ from ParserEmail import *
 wb = load_workbook(filename='ReportSpreadsheet.xlsx')
 WebParserReport = wb['WebParserReport']
 old_data = (WebParserReport['B4']).value
-print(old_data)
 
 class OldDataConvert:
 
