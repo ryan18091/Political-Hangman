@@ -26,9 +26,9 @@ def PH_Email():
     print(environ.get('EMAIL_PASSWORD'))
     print(environ.get('EMAIL_SEND'))
 
-    email_user = environ.get('EMAIL_USER')
-    email_password = environ.get('EMAIL_PASSWORD')
-    email_send = environ.get('EMAIL_SEND')
+    email_user = (environ.get('EMAIL_USER'))
+    email_password = (environ.get('EMAIL_PASSWORD'))
+    email_send = (environ.get('EMAIL_SEND'))
     subject = '-PH REPORT-.'
 
     msg = MIMEMultipart()
