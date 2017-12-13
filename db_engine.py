@@ -194,5 +194,6 @@ for politician, politician_id in t_dict.items():
     if switch == 'on':
         print('Tweepy Error If')
         t = "Twitter API Error" + politician
+
         # PH_Email()
 
