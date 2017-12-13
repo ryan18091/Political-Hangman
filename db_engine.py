@@ -142,6 +142,7 @@ for politician, politician_id in t_dict.items():
 
     except tweepy.TweepError as e:
         t = str(e) + "\n" + politician
+        print(t)
 
 
         def PH_Email():
