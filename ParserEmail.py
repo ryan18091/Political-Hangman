@@ -22,13 +22,13 @@ def PH_Email():
     # email_password = 'erickson74'
     # email_send = 'ryanerickson74@gmail.com'
     # subject = '-PH REPORT-.'
-    print(environ.get('EMAIL_USER'))
-    print(environ.get('EMAIL_PASSWORD'))
-    print(environ.get('EMAIL_SEND'))
+    user = (environ.get('EMAIL_USER'))
+    password = (environ.get('EMAIL_PASSWORD'))
+    send = (environ.get('EMAIL_SEND'))
 
-    email_user = (environ.get('EMAIL_USER'))
-    email_password = (environ.get('EMAIL_PASSWORD'))
-    email_send = (environ.get('EMAIL_SEND'))
+    email_user = user
+    email_password = password
+    email_send = send
     subject = '-PH REPORT-.'
 
     msg = MIMEMultipart()
