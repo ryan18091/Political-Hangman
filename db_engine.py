@@ -26,6 +26,7 @@ switch = 'on'
 
 
 def PH_Email():
+    print('sending email...')
     user = (environ.get('EMAIL_USER'))
     password = (environ.get('EMAIL_PASSWORD'))
     send = (environ.get('EMAIL_SEND'))
@@ -177,11 +178,11 @@ for politician, politician_id in t_dict.items():
 
     except tweepy.TweepError as e:
         t = str(e) + "\n" + politician
-        print(t)
-
+        print('Tweepy Error Except')
         PH_Email()
 
     if switch == 'on':
+        print('Tweepy Error If')
         t = "Twitter API Error" + politician
         PH_Email()
 
