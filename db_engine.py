@@ -9,18 +9,6 @@ from os import environ
 
 from models import *
 
-#
-# consumer_key = "W6Y90zcmKK126pz2m5ITR4YQw"
-# consumer_secret = "dJv2OOm5cJ77SY1E4AgPknhrSuoT8vCz81yb18quCR6JqKaqjr"
-# access_token = "2401698925-WSqJyNpuJacyf2lJAGe1XVGmcNT7nEYfBmwu2KY"
-# access_token_secret = "bUTBTRFkX4waWGcSvqOclIZSLCFuwy9chZKEA0vOQwVh8"
-
-print(environ.get('consumer_key'))
-print(environ.get('consumer_secret'))
-print(environ.get('access_token'))
-print(environ.get('access_token_secret'))
-
-
 consumer_key = (environ.get('consumer_key'))
 consumer_secret = (environ.get('consumer_secret'))
 access_token = (environ.get('access_token'))
@@ -189,11 +177,10 @@ for politician, politician_id in t_dict.items():
     except tweepy.TweepError as e:
         t = str(e) + "\n" + politician
         print('Tweepy Error Except')
-        # PH_Email()
+        PH_Email()
 
     if switch == 'on':
         print('Tweepy Error If')
         t = "Twitter API Error" + politician
-
-        # PH_Email()
+        PH_Email()
 
