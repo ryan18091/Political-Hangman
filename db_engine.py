@@ -21,10 +21,41 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
+global switch
+switch = 'on'
+
+
+def PH_Email():
+    user = (environ.get('EMAIL_USER'))
+    password = (environ.get('EMAIL_PASSWORD'))
+    send = (environ.get('EMAIL_SEND'))
+
+    email_user = user
+    email_password = password
+    email_send = send
+    subject = 'Political Hangman Twitter API Error.'
+
+    msg = MIMEMultipart()
+    msg['From'] = email_user
+    msg['To'] = email_send
+    msg['Subject'] = subject
+
+    body = t
+    msg.attach(MIMEText(body, 'plain'))
+
+    text = msg.as_string()
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(email_user, email_password)
+
+    server.sendmail(email_user, email_send, text)
+    server.quit()
+
 
 from pol_ids import t_dict
 
 for politician, politician_id in t_dict.items():
+
 
 
     time.sleep(6)
@@ -32,11 +63,14 @@ for politician, politician_id in t_dict.items():
     try:
 
         for tweet in tweepy.Cursor(api.user_timeline, id=politician_id, tweet_mode='extended').items(10):
+            print('in')
 
             if (not tweet.retweeted) and ('RT @' not in tweet.full_text):
                 try:
                     t = (tweet)
                     i = (tweet.full_text)
+
+                    switch = 'off'
 
                     mystring = str(t)
 
@@ -140,36 +174,16 @@ for politician, politician_id in t_dict.items():
                 # print('Retweet')
                 continue
 
+            if tweet.text is None:
+                print('yep')
+
     except tweepy.TweepError as e:
         t = str(e) + "\n" + politician
         print(t)
 
-
-        def PH_Email():
-
-            user = (environ.get('EMAIL_USER'))
-            password = (environ.get('EMAIL_PASSWORD'))
-            send = (environ.get('EMAIL_SEND'))
-
-            email_user = user
-            email_password = password
-            email_send = send
-            subject = 'Political Hangman Twitter API Error.'
-
-            msg = MIMEMultipart()
-            msg['From'] = email_user
-            msg['To'] = email_send
-            msg['Subject'] = subject
-
-            body = t
-            msg.attach(MIMEText(body, 'plain'))
-
-            text = msg.as_string()
-            server = smtplib.SMTP('smtp.gmail.com', 587)
-            server.starttls()
-            server.login(email_user, email_password)
-
-            server.sendmail(email_user, email_send, text)
-            server.quit()
-
         PH_Email()
+
+    if switch == 'on':
+        t = "Twitter API Error" + politician
+        PH_Email()
+
