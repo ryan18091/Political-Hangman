@@ -1,4 +1,4 @@
-t_dict = {'Donald Trump': 250738771, 'Bernie Sanders': 216776631,'Mike Pence': 22203756, 'Rex Tillerson':
+t_dict = {'Donald Trump': 25073877, 'Bernie Sanders': 216776631,'Mike Pence': 22203756, 'Rex Tillerson':
     9624742, 'Richard Shelby': 21111098,'Dan Sullivan': 2891210047, 'Steven T. Mnuchin':799764016885329921, 'Jeff Sessions':986781648,
           'Ryan Zinke': 1906282568, 'Sonny Perdue':842072478834909184, 'Wilbur L. Ross, Jr.': 836305915452272641,
           'Alexander Acosta': 819980276570976256, 'Benjamin S. Carson, Sr.':828613457020870657, 'Elaine L. Chao': 826065858548133888,
@@ -35,7 +35,9 @@ t_dict = {'Donald Trump': 250738771, 'Bernie Sanders': 216776631,'Mike Pence': 2
           'Raul Grijalva': 28602948, 'Paul A. Gosar':240760644, 'Andy Biggs':816652616625168388,'David Schweikert':229197216,
           'Ruben Gallego':2966570782, 'Kyrsten Sinema':1080844782, 'Rick Crawford':233693291, 'French Hill':2953974395,
           'Steve Womack':234469322,'Bruce Westerman':2852998461,'Doug Lamalfa':1069124515,'John Garamendi':88806753,
-          'Tom McClintock':50152441,'Mike Thompson':303861808,}
+          'Tom McClintock':50152441,'Mike Thompson':303861808, 'Doris O. Matsui':38254095,'Ami Bera':950783972,
+          'Paul Cook':1074412920,'Jerry McNerney':385429543, 'Jeff Denham':248699486,'Mark DeSaulnier':2968007206,
+          'Nancy Pelosi': 15764644,'Barbara Lee':248735463, 'Jackie Speier':}
 
 
 
