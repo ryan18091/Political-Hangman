@@ -174,8 +174,6 @@ for politician, politician_id in t_dict.items():
                 # print('Retweet')
                 continue
 
-            if tweet.text is None:
-                print('yep')
 
     except tweepy.TweepError as e:
         t = str(e) + "\n" + politician
