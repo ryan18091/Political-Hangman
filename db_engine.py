@@ -4,6 +4,8 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import tweepy
+from os import environ
+
 
 from models import *
 
@@ -144,9 +146,13 @@ for politician, politician_id in t_dict.items():
 
         def PH_Email():
 
-            email_user = EMAIL_USER
-            email_password = EMAIL_PASSWORD
-            email_send = EMAIL_SEND
+            user = (environ.get('EMAIL_USER'))
+            password = (environ.get('EMAIL_PASSWORD'))
+            send = (environ.get('EMAIL_SEND'))
+
+            email_user = user
+            email_password = password
+            email_send = send
             subject = 'Political Hangman Twitter API Error.'
 
             msg = MIMEMultipart()
