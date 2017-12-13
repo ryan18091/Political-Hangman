@@ -1,5 +1,5 @@
-t_dict = {'Donald Trump': 25073877, 'Bernie Sanders': 216776631,'Mike Pence': 22203756, 'Rex Tillerson':
-      9624742, 'Richard Shelby': 21111098,'Dan Sullivan': 2891210047, 'Steven T. Mnuchin':799764016885329921, 'Jeff Sessions':986781648,
+t_dict = {'Donald Trump': 250738771, 'Bernie Sanders': 216776631,'Mike Pence': 22203756, 'Rex Tillerson':
+    807824558631763968, 'Richard Shelby': 21111098,'Dan Sullivan': 2891210047, 'Steven T. Mnuchin':799764016885329921, 'Jeff Sessions':986781648,
           'Ryan Zinke': 1906282568, 'Sonny Perdue':842072478834909184, 'Wilbur L. Ross, Jr.': 836305915452272641,
           'Alexander Acosta': 819980276570976256, 'Benjamin S. Carson, Sr.':828613457020870657, 'Elaine L. Chao': 826065858548133888,
           'James Richard Perry': 830128820447539208, 'Elisabeth Prince DeVos': 828997388920619008,
@@ -31,7 +31,10 @@ t_dict = {'Donald Trump': 25073877, 'Bernie Sanders': 216776631,'Mike Pence': 22
           'Ted Cruz':23022687,'Orrin Hatch':262756641,'Mike Lee':88784440,'Patrick Leahy':242836537,
           'Mark Warner': 7429102,'Tim Kaine':172858784,'Patty Murray':293131808,'Maria Cantwell':117501995,
           'Joe Manchin':234374703,'Shelley Moore Capito':193794406,'Ron Johnson':233737858,'Tammy Baldwin':1074518754,
-          'Mike Enzi': 291756142,'John Barrasso':202206694}
+          'Mike Enzi': 291756142,'John Barrasso':202206694, "Tom O'Halleran":808416682972770304, 'Martha McSally':2964949642,
+          'Raul Grijalva': 28602948, 'Paul A. Gosar':240760644, 'Andy Biggs':816652616625168388,'David Schweikert':229197216,
+          'Ruben Gallego':2966570782, 'Kyrsten Sinema':1080844782, 'Rick Crawford':233693291, 'French Hill':2953974395,
+          'Steve Womack':234469322,'Bruce Westerman':2852998461,'Doug Lamalfa':1069124515,}
 
 
 
